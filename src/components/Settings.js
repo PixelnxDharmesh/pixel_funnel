@@ -21,7 +21,7 @@ const Settings = () => {
                   data-original="#000000"></path>
               </g>
             </svg>
-          </Link>
+          </Link>                         
           <h3 className="ffc-heading">Setting</h3>
         </div>
 
