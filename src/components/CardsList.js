@@ -240,7 +240,7 @@ function CardsList() {
 
 
                   <div className={`tab ${activeTab === 'tab1' ? 'tab-active' : ''}`} data-id="tab1">
-                    <div className="row">
+                    <div classsName="row">
                       <div className="col-xl-6 col-lg-6 col-sm-12">
                         <div className="ffc-main-input ffc-require">
                           <label className="ffc-main-label">Title</label>
@@ -250,7 +250,7 @@ function CardsList() {
                             type="text"
                             placeholder="Enter title"
                             name="title"
-                            value={selectedProduct.name}
+                             value={selectedProduct.name}
                             autoComplete="off"
                           />
                         </div>
