@@ -13,7 +13,7 @@ function Header() {
           <div className="ffc-nav-wr">
             <ul className="ffc-nav-list">
               <li className="ffc-nav-item">
-                <Link to="/products">Products</Link>
+                <Link to="/products" className='ffc-nav-active'>Products</Link>
               </li>
               <li className="ffc-nav-item">
                 <Link to="/Settings">Settings</Link>
