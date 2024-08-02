@@ -654,7 +654,7 @@ input[type=number]::-webkit-outer-spin-button {
 .ffc-cards-wrapper {
   position: relative;
   background: var(--bg-color);
-  padding: 85px 15px;
+  padding: 100px 15px 85px;
 }
 
 .ffc-cards-item-wr {
@@ -848,7 +848,9 @@ input[type=number]::-webkit-outer-spin-button {
 
 }
 
-.ffc-tab-wrapper .tab-menu {}
+.ffc-tab-wrapper .tab-menu {
+  
+}
 
 .ffc-tab-wrapper .tab-menu ul {
   margin: 0;
@@ -895,6 +897,8 @@ input[type=number]::-webkit-outer-spin-button {
   display: none;
 }
 
+
+
 .ffc-tab-wrapper .tab h2 {
   color: rgba(0, 0, 0, .7);
 }
@@ -903,6 +907,20 @@ input[type=number]::-webkit-outer-spin-button {
   color: rgba(0, 0, 0, 0.6);
   text-align: justify;
 }
+
+
+.ffc-tab-wrapper .tab-2 {
+  display: none;
+}
+.ffc-tab-wrapper .tab-2 h2 {
+  color: rgba(0, 0, 0, .7);
+}
+
+.ffc-tab-wrapper .tab-2 p {
+  color: rgba(0, 0, 0, 0.6);
+  text-align: justify;
+}
+
 
 .ffc-tab-wrapper .tab-active {
   display: block;
@@ -1270,7 +1288,7 @@ input[type=number]::-webkit-outer-spin-button {
   }
 
   .ffc-cards-wrapper {
-      padding: 45px 15px;
+      padding: 85px 15px 45px;
   }
 
   .ffc-tab-wr {
