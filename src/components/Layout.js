@@ -1,4 +1,3 @@
-// src/components/Layout.js
 import React from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import Header from './Header';
@@ -11,10 +10,10 @@ const Layout = () => {
       <nav>
         <ul>
           <li>
-            <Link to="/"></Link>
+            <Link to="/products">Products</Link>
           </li>
           <li>
-            <Link to="/product"></Link>
+            <Link to="/Settings">Settings</Link>
           </li>
         </ul>
       </nav>
