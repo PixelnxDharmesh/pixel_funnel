@@ -171,111 +171,152 @@ const Settings = () => {
               </div>
             </div>
             <div className={`tab ${activeTab === 'tab3' ? 'tab-active' : ''}`} data-id="tab3">
-               <div className='ffc-tab-inner-heading'>
+              <div className='ffc-tab-inner-heading'>
                 <h2>Email Settings</h2>
                 <p>Create Email(Enter Email Type, Email Template Name)</p>
-               </div>
-     
+              </div>
 
-              
+
+
               <div className="ffc-btn-wr ffc-btn-right ffc-btn-2 mb-20">
                 <button className="ffc-btn"> Create Email</button>
               </div>
 
               <div className="ffc-email-settings-wr">
-                    
-                  <div className="ffc-email-settings-item">
-                    <div className="ffc-email-settings-icons">
-                      <img src="/images/svg/email_svg.svg" alt="" />
-                    </div>
+                <div className="ffc-email-settings-item">
+                  <div className="ffc-email-settings-icons">
+                    <img src="/images/svg/email_svg.svg" alt="" />
+                  </div>
 
-                      <ul className="">
-                        <li className="">
-                            <p>Email 
-                            </p>
-                            <p> <span>Demo Name</span></p>
-                        </li>
-                        <li className="">
-                            <p>Email Type
-                            </p>
-                            <p> <span>Demo Type</span></p>
-                        </li>
-                      </ul>
-                    <div className="ffc-btn-wr ffc-btn-2 mt-20">
-                      <button className="ffc-btn"> View Detail</button>
-                    </div>
-                      
+                  <ul className="">
+                    <li className="">
+                      <p>Email
+                      </p>
+                      <p> <span>Demo Name</span></p>
+                    </li>
+                    <li className="">
+                      <p>Email Type
+                      </p>
+                      <p> <span>Demo Type</span></p>
+                    </li>
+                  </ul>
+                  <div className="ffc-btn-wr ffc-btn-2 mt-20">
+                    <button className="ffc-btn"> View Detail</button>
                   </div>
-                  
-                  <div className="ffc-email-settings-item">
+
+                </div>
+
+                <div className="ffc-email-settings-item">
                   <div className="ffc-email-settings-icons">
-                      <img src="/images/svg/email_svg.svg" alt="" />
-                    </div>
-                      <ul className="">
-                        <li className="">
-                            <p>Email 
-                            </p>
-                            <p> <span>Demo Name</span></p>
-                        </li>
-                        <li className="">
-                            <p>Email Type
-                            </p>
-                            <p> <span>Demo Type</span></p>
-                        </li>
-                      </ul>
-                      <div className="ffc-btn-wr ffc-btn-2 mt-20">
-                      <button className="ffc-btn"> View Detail</button>
-                    </div>
-                      
+                    <img src="/images/svg/email_svg.svg" alt="" />
                   </div>
-                  <div className="ffc-email-settings-item">
+                  <ul className="">
+                    <li className="">
+                      <p>Email
+                      </p>
+                      <p> <span>Demo Name</span></p>
+                    </li>
+                    <li className="">
+                      <p>Email Type
+                      </p>
+                      <p> <span>Demo Type</span></p>
+                    </li>
+                  </ul>
+                  <div className="ffc-btn-wr ffc-btn-2 mt-20">
+                    <button className="ffc-btn"> View Detail</button>
+                  </div>
+
+                </div>
+                <div className="ffc-email-settings-item">
                   <div className="ffc-email-settings-icons">
-                      <img src="/images/svg/email_svg.svg" alt="" />
-                    </div>
-                      <ul className="">
-                        <li className="">
-                            <p>Email 
-                            </p>
-                            <p> <span>Demo Name</span></p>
-                        </li>
-                        <li className="">
-                            <p>Email Type
-                            </p>
-                            <p> <span>Demo Type</span></p>
-                        </li>
-                      </ul>
-                      <div className="ffc-btn-wr ffc-btn-2 mt-20">
-                      <button className="ffc-btn"> View Detail</button>
-                    </div>
-                      
+                    <img src="/images/svg/email_svg.svg" alt="" />
                   </div>
-                  <div className="ffc-email-settings-item">
+                  <ul className="">
+                    <li className="">
+                      <p>Email
+                      </p>
+                      <p> <span>Demo Name</span></p>
+                    </li>
+                    <li className="">
+                      <p>Email Type
+                      </p>
+                      <p> <span>Demo Type</span></p>
+                    </li>
+                  </ul>
+                  <div className="ffc-btn-wr ffc-btn-2 mt-20">
+                    <button className="ffc-btn"> View Detail</button>
+                  </div>
+
+                </div>
+                <div className="ffc-email-settings-item">
                   <div className="ffc-email-settings-icons">
-                      <img src="/images/svg/email_svg.svg" alt="" />
-                    </div>
-                      <ul className="">
-                        <li className="">
-                            <p>Email 
-                            </p>
-                            <p> <span>Demo Name</span></p>
-                        </li>
-                        <li className="">
-                            <p>Email Type
-                            </p>
-                            <p> <span>Demo Type</span></p>
-                        </li>
-                      </ul>
-                      <div className="ffc-btn-wr ffc-btn-2 mt-20">
-                      <button className="ffc-btn"> View Detail</button>
-                    </div>
-                      
+                    <img src="/images/svg/email_svg.svg" alt="" />
                   </div>
-                  
+                  <ul className="">
+                    <li className="">
+                      <p>Email
+                      </p>
+                      <p> <span>Demo Name</span></p>
+                    </li>
+                    <li className="">
+                      <p>Email Type
+                      </p>
+                      <p> <span>Demo Type</span></p>
+                    </li>
+                  </ul>
+                  <div className="ffc-btn-wr ffc-btn-2 mt-20">
+                    <button className="ffc-btn"> View Detail</button>
+                  </div>
+
+                </div>
+                <div className="ffc-email-settings-item">
+                  <div className="ffc-email-settings-icons">
+                    <img src="/images/svg/email_svg.svg" alt="" />
+                  </div>
+                  <ul className="">
+                    <li className="">
+                      <p>Email
+                      </p>
+                      <p> <span>Demo Name</span></p>
+                    </li>
+                    <li className="">
+                      <p>Email Type
+                      </p>
+                      <p> <span>Demo Type</span></p>
+                    </li>
+                  </ul>
+                  <div className="ffc-btn-wr ffc-btn-2 mt-20">
+                    <button className="ffc-btn"> View Detail</button>
+                  </div>
+
+                </div>
+                <div className="ffc-email-settings-item">
+                  <div className="ffc-email-settings-icons">
+                    <img src="/images/svg/email_svg.svg" alt="" />
+                  </div>
+                  <ul className="">
+                    <li className="">
+                      <p>Email
+                      </p>
+                      <p> <span>Demo Name</span></p>
+                    </li>
+                    <li className="">
+                      <p>Email Type
+                      </p>
+                      <p> <span>Demo Type</span></p>
+                    </li>
+                  </ul>
+                  <div className="ffc-btn-wr ffc-btn-2 mt-20">
+                    <button className="ffc-btn"> View Detail</button>
+                  </div>
+
+                </div>
+        
               </div>
 
-             
+
             </div>
-            
+
           </div>
         </form>
       </div>

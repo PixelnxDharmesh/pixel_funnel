@@ -542,14 +542,17 @@ input[type=number]::-webkit-outer-spin-button {
 
 .ffc-header-parent ul.ffc-nav-list li a {
   color: var(--title-color);
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .ffc-header-parent ul.ffc-nav-list li a:hover {
   color: var(--primary-color);
 }
 
+.ffc-nav-active {
+  color: var(--primary-color) !important;
+}
 /* header css end */
 
 /* profile */
@@ -1251,6 +1254,13 @@ input[type=number]::-webkit-outer-spin-button {
 .ffc-email-settings-wr ul li p span {
   font-weight: 700;
 }
+.ffc-email-settings-item .ffc-btn {
+  min-width: 100px;
+  height: 30px;
+  font-size: 12px;
+  line-height: 30px;
+  padding: 0 5px;
+}
 
 .ffc-tab-inner-heading h2 {
   margin: 0;
@@ -1260,7 +1270,8 @@ input[type=number]::-webkit-outer-spin-button {
 .ffc-tab-inner-heading p {
   margin: 8px 0 0;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
+  color: var(--text-color);
 }
 @media (min-width: 576px) {
   .ffc-modal .ffc-popup-wr {

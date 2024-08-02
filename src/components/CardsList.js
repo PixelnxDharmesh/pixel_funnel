@@ -261,7 +261,7 @@ function CardsList() {
                     <div className="ffc-btn-wr ffc-btn-right ffc-btn-2">
                       <button className="ffc-btn">Add Payment
                         Provider </button>
-                      <button className="ffc-btn">Refresh</button>
+                      <button className="ffc-btn ffc-btn-01">Refresh</button>
                     </div>
 
                     <div class="row mt-20">
