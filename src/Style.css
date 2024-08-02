@@ -839,6 +839,14 @@ input[type=number]::-webkit-outer-spin-button {
   background-color: var(--bg-color);
 }
 
+
+.ffc-btn-right {
+  justify-content: right;
+  display: flex;
+  gap: 10px;
+}
+
+
 .ffc-tab-wr {
   display: grid;
   grid-template-columns: 300px 1fr;
@@ -873,11 +881,11 @@ input[type=number]::-webkit-outer-spin-button {
 
 .ffc-tab-wrapper .tab-menu ul li a {
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.4);
+  color: var(--title-color);
   background-color: transparent;
   padding: 15px 25px;
   border-radius: 6px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .ffc-tab-wrapper .tab-menu ul li a.active-a {
@@ -903,11 +911,11 @@ input[type=number]::-webkit-outer-spin-button {
 
 
 .ffc-tab-wrapper .tab h2 {
-  color: rgba(0, 0, 0, .7);
+  /* color: rgba(0, 0, 0, .7); */
 }
 
 .ffc-tab-wrapper .tab p {
-  color: rgba(0, 0, 0, 0.6);
+  /* color: rgba(0, 0, 0, 0.6); */
   text-align: justify;
 }
 
@@ -916,11 +924,11 @@ input[type=number]::-webkit-outer-spin-button {
   display: none;
 }
 .ffc-tab-wrapper .tab-2 h2 {
-  color: rgba(0, 0, 0, .7);
+  /* color: rgba(0, 0, 0, .7); */
 }
 
 .ffc-tab-wrapper .tab-2 p {
-  color: rgba(0, 0, 0, 0.6);
+  /* color: rgba(0, 0, 0, 0.6); */
   text-align: justify;
 }
 
@@ -1116,6 +1124,14 @@ input[type=number]::-webkit-outer-spin-button {
 
 
 /* setting intg */
+
+.ffc-email-intg-input {
+  background: var(--bg-light-color);
+  padding: 20px 20px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
 .ffc-email-intg-encap {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -1176,13 +1192,76 @@ input[type=number]::-webkit-outer-spin-button {
   padding: 0 5px;
 }
 
+.ffc-tab-wrapper .ffc-main-input {
+  margin-bottom: 15px;
+}
+
 /* setting intg end*/
 
 .mt-20 {
   margin-top: 20px;
 }
 
+.mb-20 {
+  margin-bottom: 20px;
+}
 
+
+
+.ffc-email-settings-wr {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 15px;
+  margin-top: 50px;
+}
+.ffc-email-settings-item {
+  border-radius: 12px;
+  box-shadow: 0 18px 30px 0 rgba(177, 193, 224, .1);
+  padding: 20px;
+  background-color: var(--white-color);
+  position: relative;
+  margin-bottom: 30px;
+}
+.ffc-email-settings-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background: var(--bg-light-color);
+  position: absolute;
+  top: -20px;
+  left: 20px;
+}
+.ffc-email-settings-item ul {
+  margin-top: 30px;
+}
+.ffc-email-settings-wr ul li {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+.ffc-email-settings-wr ul li p {
+   font-size: 14px;
+   color: var(--title-color);
+   font-weight: 500;
+   margin: 0;
+}
+.ffc-email-settings-wr ul li p span {
+  font-weight: 700;
+}
+
+.ffc-tab-inner-heading h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+.ffc-tab-inner-heading p {
+  margin: 8px 0 0;
+  font-size: 14px;
+  font-weight: 600;
+}
 @media (min-width: 576px) {
   .ffc-modal .ffc-popup-wr {
       min-height: calc(100% - 3.5rem);
