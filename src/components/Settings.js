@@ -78,7 +78,7 @@ const Settings = () => {
                   <div className="ffc-main-input ffc-require">
                     <label className="ffc-main-label">Title</label>
                     <input className="ffc-custom-input require" data-error="Title is required" type="text"
-                      placeholder="Enter title" name="title" value="" autoComplete="off" />
+                      placeholder="Enter title" name="title" value=" " autoComplete="off" />
                   </div>
                 </div>
               </div>

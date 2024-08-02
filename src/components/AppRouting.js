@@ -10,7 +10,7 @@ function AppRouting() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="products" element={<CardsList />} />
-          <Route path="settings" element={<Settings />} />
+          <Route path="Settings" element={<Settings />} />
         </Route>
       </Routes>
     </BrowserRouter>
