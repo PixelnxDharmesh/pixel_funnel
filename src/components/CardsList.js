@@ -64,7 +64,7 @@ function CardsList() {
                 <button className="ffc-btn" onClick={toggleModal}>Create New Product</button>
               </div>
             </div>
-            
+
             <div className="ffc-cards-item-wr">
               {products.length > 0 ? (
                 products.map((product) => (
@@ -162,19 +162,19 @@ function CardsList() {
           <div className="ffc-tab-wrapper">
             <div className="ffc-container">
 
-            <div class="ffc-section-heading">
+              <div class="ffc-section-heading">
                 <a href="" class="ffc-back-btn" onClick={handleBackButtonClick}>
-                    <svg height="16px" width="16px" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0"
-                        viewBox="0 0 447.243 447.243">
-                        <g>
-                            <path
-                                d="M420.361 192.229a31.967 31.967 0 0 0-5.535-.41H99.305l6.88-3.2a63.998 63.998 0 0 0 18.08-12.8l88.48-88.48c11.653-11.124 13.611-29.019 4.64-42.4-10.441-14.259-30.464-17.355-44.724-6.914a32.018 32.018 0 0 0-3.276 2.754l-160 160c-12.504 12.49-12.515 32.751-.025 45.255l.025.025 160 160c12.514 12.479 32.775 12.451 45.255-.063a32.084 32.084 0 0 0 2.745-3.137c8.971-13.381 7.013-31.276-4.64-42.4l-88.32-88.64a64.002 64.002 0 0 0-16-11.68l-9.6-4.32h314.24c16.347.607 30.689-10.812 33.76-26.88 2.829-17.445-9.019-33.88-26.464-36.71z"
-                                data-original="#000000"></path>
-                        </g>
-                    </svg>
+                  <svg height="16px" width="16px" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0"
+                    viewBox="0 0 447.243 447.243">
+                    <g>
+                      <path
+                        d="M420.361 192.229a31.967 31.967 0 0 0-5.535-.41H99.305l6.88-3.2a63.998 63.998 0 0 0 18.08-12.8l88.48-88.48c11.653-11.124 13.611-29.019 4.64-42.4-10.441-14.259-30.464-17.355-44.724-6.914a32.018 32.018 0 0 0-3.276 2.754l-160 160c-12.504 12.49-12.515 32.751-.025 45.255l.025.025 160 160c12.514 12.479 32.775 12.451 45.255-.063a32.084 32.084 0 0 0 2.745-3.137c8.971-13.381 7.013-31.276-4.64-42.4l-88.32-88.64a64.002 64.002 0 0 0-16-11.68l-9.6-4.32h314.24c16.347.607 30.689-10.812 33.76-26.88 2.829-17.445-9.019-33.88-26.464-36.71z"
+                        data-original="#000000"></path>
+                    </g>
+                  </svg>
                 </a>
                 <h3 class="ffc-heading">{selectedProduct.name}</h3>
-            </div>
+              </div>
               <form className="ffc-tab-wr" action="" method="">
                 <div className="ffc-tab-list tab-menu">
                   <ul>
@@ -225,23 +225,23 @@ function CardsList() {
                     </div>
                   </div>
                   <div className={`tab ${activeTab === 'tab2' ? 'tab-active' : ''}`} data-id="tab2">
-                      <div class="row">
-                            <div class="col-xl-6 col-lg-6 col-sm-12">
-                                <div class="ffc-email-intg-wr">
-                                    <div class="ffc-email-intg-encap">
-                                        <div class="ffc-email-intg-img">
-                                            <img src="/images/stripe.png" alt="" />
-                                        </div>
-                                        <div class="ffc-email-intg-info">
-                                            <span class="ffc-email-intg-name">
-                                                Company
-                                            </span>
-                                            <button class="ffc-btn ffc-btn-03">Disconnected</button>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="row">
+                      <div class="col-xl-6 col-lg-6 col-sm-12">
+                        <div class="ffc-email-intg-wr">
+                          <div class="ffc-email-intg-encap">
+                            <div class="ffc-email-intg-img">
+                              <img src="/images/stripe.png" alt="" />
                             </div>
+                            <div class="ffc-email-intg-info">
+                              <span class="ffc-email-intg-name">
+                                Company
+                              </span>
+                              <button class="ffc-btn ffc-btn-03">Disconnected</button>
+                            </div>
+                          </div>
                         </div>
+                      </div>
+                    </div>
                   </div>
                   <div className={`tab ${activeTab === 'tab3' ? 'tab-active' : ''}`} data-id="tab3">
                     <div className="col-xl-6 col-lg-6 col-sm-12">
