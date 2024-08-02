@@ -52,7 +52,7 @@ function CardsList() {
     setActiveTab(tabId);
   };
 
-  
+
   const toggleOptions = (productId) => {
     setVisibleOptionsProductId(visibleOptionsProductId === productId ? null : productId);
   };
@@ -65,7 +65,7 @@ function CardsList() {
             <div className="ffc-head-flex">
               <div className="ffc-section-heading">
 
-              <a href="" class="ffc-back-btn" onClick={handleBackButtonClick}>
+                <a href="" class="ffc-back-btn" onClick={handleBackButtonClick}>
                   <svg height="16px" width="16px" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0"
                     viewBox="0 0 447.243 447.243">
                     <g>
@@ -86,8 +86,8 @@ function CardsList() {
 
 
             <div class="ffc-section-heading">
-              
-              </div>
+
+            </div>
 
             <div className="ffc-cards-item-wr">
               {products.length > 0 ? (
@@ -237,6 +237,8 @@ function CardsList() {
                   </div>
                 </div>
                 <div className="ffc-tab-item tab-deta">
+
+
                   <div className={`tab ${activeTab === 'tab1' ? 'tab-active' : ''}`} data-id="tab1">
                     <div className="row">
                       <div className="col-xl-6 col-lg-6 col-sm-12">
@@ -256,7 +258,13 @@ function CardsList() {
                     </div>
                   </div>
                   <div className={`tab ${activeTab === 'tab2' ? 'tab-active' : ''}`} data-id="tab2">
-                    <div class="row">
+                    <div className="ffc-btn-wr ffc-btn-right ffc-btn-2">
+                      <button className="ffc-btn">Add Payment
+                        Provider </button>
+                      <button className="ffc-btn">Refresh</button>
+                    </div>
+
+                    <div class="row mt-20">
                       <div class="col-xl-6 col-lg-6 col-sm-12">
                         <div class="ffc-email-intg-wr">
                           <div class="ffc-email-intg-encap">
@@ -278,20 +286,38 @@ function CardsList() {
                     <div className="col-xl-6 col-lg-6 col-sm-12">
                       <div className="ffc-main-input ffc-require">
                         <label className="ffc-main-label">Choose the currency for the product*</label>
-                        <input
-                          className="ffc-custom-input require"
-                          data-error="Currency is required"
-                          type="text"
-                          placeholder="Enter currency"
-                          name="currency"
-                          autoComplete="off"
-                        />
+                        <select className="ffc-select-wr" name="state">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                        </select>
                       </div>
                     </div>
                   </div>
                   <div className={`tab ${activeTab === 'tab4' ? 'tab-active' : ''}`} data-id="tab4">
-                    <h2>heading of tab 4</h2>
-                    <p>Content of tab 4</p>
+                    <div className="row">
+                      <div className="col-xl-6 col-lg-6 col-sm-12">
+                        <div className="ffc-main-input ffc-require">
+                          <label className="ffc-main-label">Page Script</label>
+                          <input
+                            className="ffc-custom-input require"
+                            data-error="Title is required"
+                            type="text"
+                            placeholder="Enter Page Script"
+                            name="title"
+                            value={selectedProduct.name}
+                            autoComplete="off"
+                          />
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div className={`tab ${activeTab === 'tab5' ? 'tab-active' : ''}`} data-id="tab5">
                     <h2>heading of tab 5</h2>
