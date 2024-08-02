@@ -9,6 +9,7 @@ function CardsList() {
   const [activeTab, setActiveTab] = useState('tab1');
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isProductPageVisible, setProductPageVisible] = useState(true);
+  const [visibleOptionsProductId, setVisibleOptionsProductId] = useState(null);
 
   const toggleModal = () => {
     setModalOpen(!isModalOpen);
@@ -51,6 +52,11 @@ function CardsList() {
     setActiveTab(tabId);
   };
 
+  
+  const toggleOptions = (productId) => {
+    setVisibleOptionsProductId(visibleOptionsProductId === productId ? null : productId);
+  };
+
   return (
     <div className="ffc-cards-wrapper">
       <div className="ffc-container">
@@ -89,7 +95,13 @@ function CardsList() {
                     </div>
                     <div className="ffc-cards-item-details">
                       <h3 className="ffc-heading">{product.name}</h3>
-                      <div className="ffc-cards-dots">
+                      <div className="ffc-cards-dots" onClick={() => toggleOptions(product.id)}>
+                        <div className={`ffc-cardOver-list ${visibleOptionsProductId === product.id ? 'ffc-show-list' : ''}`}>
+                          <ul>
+                            <li><a href="">Clone</a></li>
+                            <li><a href="">Delete</a></li>
+                          </ul>
+                        </div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="5" height="17" fill="#7D809D">
                           <path d="M4.264.789a2 2 0 0 1-2.828 2.828A2 2 0 0 1 4.264.789zm0 6a2 2 0 1 1-2.828 2.828 2 2 0 1 1 2.828-2.828zm0 6a2 2 0 0 1-2.828 2.829 2 2 0 0 1 2.828-2.828z" fill="#7D809D" />
                         </svg>
@@ -295,7 +307,6 @@ function CardsList() {
 }
 
 export default CardsList;
-
 
 
 
