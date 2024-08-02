@@ -57,7 +57,7 @@ function CardsList() {
           <>
             <div className="ffc-head-flex">
               <div className="ffc-section-heading">
-                <h3 className="ffc-heading">My Products</h3>
+                <h3 className="ffc-heading">My Products new</h3>
               </div>
               <div className="ffc-header-btn ffc-btn_1">
                 <button className="ffc-btn" onClick={toggleModal}>Create New Product</button>
