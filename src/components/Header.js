@@ -27,6 +27,9 @@ function Header() {
               <li className="ffc-nav-item">
                 <Link to="">shop</Link>
               </li>
+              <li className="ffc-nav-item">
+                <Link to="">shop11</Link>
+              </li>
             </ul>
           </div>
           <div className="ffc-profile-item">
