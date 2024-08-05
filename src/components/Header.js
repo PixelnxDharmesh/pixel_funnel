@@ -16,7 +16,7 @@ function Header() {
                 <Link to="/products" className='ffc-nav-active'>Products</Link>
               </li>
               <li className="ffc-nav-item">
-                <Link to="/Settings">Settings</Link>
+                <Link to="/Settings" className='ffc-nav-active'>Settings</Link>
               </li>
                                    
             </ul>
