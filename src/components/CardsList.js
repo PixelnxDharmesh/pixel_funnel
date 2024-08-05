@@ -178,6 +178,8 @@ function CardsList() {
                       <div className="row ffc-justify-center">
                         <div className="ffc-popupFooter ffc-btn-groups ffc-mt">
                           <button type="button" className="ffc-btn ffc-btn-02 ffc-mr" onClick={toggleModal}>Cancel</button>
+                          </div>
+                          <div> 
                           <button type="submit" className="ffc-btn ffc-btn-01">Create</button>
                         </div>
                       </div>
