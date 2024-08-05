@@ -803,6 +803,7 @@ input[type=number]::-webkit-outer-spin-button {
   right: 10px;
   cursor: pointer;
   top: 0;
+
 }
 
 .ffc-cardOver-list {
@@ -1354,6 +1355,27 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: 500;
   color: var(--text-color);
 }
+
+.ffc-modal .ffc-selected-product-forView {
+   margin-top: 20px;
+}
+.ffc-modal .ffc-selected-product-forView p {
+  font-size: 15px;
+}
+.ffc-modal .ffc-selected-product-forView p span {
+  color: var(--title-color);
+}
+.ffc-modal ul.ffc-selected-product-forView li {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+.ffc-modal ul.ffc-selected-product-forView li:last-child {
+  margin-bottom: 0;
+}
+
+
+
 @media (min-width: 576px) {
   .ffc-modal .ffc-popup-wr {
       min-height: calc(100% - 3.5rem);

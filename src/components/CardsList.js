@@ -37,7 +37,7 @@ function CardsList() {
     setViewModalOpen(true);
     document.body.classList.toggle('popup-show', true);
   };
-  
+
 
   const handleInputChange = (e) => {
     setNewProductName(e.target.value);
@@ -156,27 +156,29 @@ function CardsList() {
           </>
         )}
         {isViewModalOpen && selectedProductForView && (
-  <div className="ffc-modal">
-    <div className="ffc-popup-box ffc-modal-1 popup-box-show">
-      <div className="ffc-over" onClick={() => setViewModalOpen(false)}></div>
-      <div className="ffc-popup-wr">
-        <div className="ffc-popup-full">
-          <div className="ffc-popup-inner">
-            <div className="ffc-popup-content">
-              <h4>Product Details</h4>
-              <p>Name: {selectedProductForView.name}</p>
-              <p>Type: {selectedProductForView.type}</p>
-              <p>Created On: {selectedProductForView.createdOn}</p>
-            </div>
-            <div className="ffc-popupFooter ffc-btn-groups ffc-mt">
-              <button type="button" className="ffc-btn ffc-btn-02 ffc-mr" onClick={() => setViewModalOpen(false)}>Close</button>
+          <div className="ffc-modal">
+            <div className="ffc-popup-box ffc-modal-1 popup-box-show">
+              <div className="ffc-over" onClick={() => setViewModalOpen(false)}></div>
+              <div className="ffc-popup-wr">
+                <div className="ffc-popup-full">
+                  <div className="ffc-popup-inner">
+                    <div className="ffc-popup-content">
+                      <h4 className='ffc-popup-head'>Product Details</h4>
+                      <ul class="ffc-selected-product-forView">
+                        <li><p>Name:</p><p><span>{selectedProductForView.name}</span></p></li>
+                        <li><p>Type: </p><p><span>{selectedProductForView.type}</span></p></li>
+                        <li><p>Created On:</p><p><span>{selectedProductForView.createdOn}</span></p></li>
+                      </ul>
+                    </div>
+                    <div className="ffc-popupFooter ffc-btn-groups ffc-mt">
+                      <button type="button" className="ffc-btn ffc-btn-02 ffc-mr" onClick={() => setViewModalOpen(false)}>Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-)}
+        )}
 
 
         {isModalOpen && (
@@ -378,7 +380,7 @@ function CardsList() {
 }
 
 export default CardsList;
-  
+
 
 
 
