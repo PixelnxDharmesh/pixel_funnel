@@ -171,17 +171,19 @@ const Settings = () => {
               </div>
             </div>
             <div className={`tab ${activeTab === 'tab3' ? 'tab-active' : ''}`} data-id="tab3">
-              <div className='ffc-tab-inner-heading'>
-                <h2>Email Settings</h2>
-                <p>Create Email(Enter Email Type, Email Template Name)</p>
+
+              <div className="ffc-head-flex">
+                <div className='ffc-tab-inner-heading'>
+                  <h2>Email Settings</h2>
+                  <p>Create Email(Enter Email Type, Email Template Name)</p>
+                </div>
+
+                <div className="ffc-btn-wr ffc-btn-2 mb-20">
+                  <button className="ffc-btn"> Create Email</button>
+                </div>
+
               </div>
-
-
-
-              <div className="ffc-btn-wr ffc-btn-right ffc-btn-2 mb-20">
-                <button className="ffc-btn"> Create Email</button>
-              </div>
-
+      
               <div className="ffc-email-settings-wr">
                 <div className="ffc-email-settings-item">
                   <div className="ffc-email-settings-icons">

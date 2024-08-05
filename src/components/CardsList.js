@@ -250,7 +250,7 @@ function CardsList() {
                             type="text"
                             placeholder="Enter title"
                             name="title"
-                             value={selectedProduct.name}
+                            value={selectedProduct.name}
                             autoComplete="off"
                           />
                         </div>
@@ -299,6 +299,8 @@ function CardsList() {
                           <option value="10">10</option>
                         </select>
                       </div>
+                      <p className=''>Please set price for your product
+                      </p>
                     </div>
                   </div>
                   <div className={`tab ${activeTab === 'tab4' ? 'tab-active' : ''}`} data-id="tab4">
@@ -320,16 +322,16 @@ function CardsList() {
                     </div>
                   </div>
                   <div className={`tab ${activeTab === 'tab5' ? 'tab-active' : ''}`} data-id="tab5">
-                    <h2>heading of tab 5</h2>
-                    <p>Content of tab 5</p>
+
                   </div>
                   <div className={`tab ${activeTab === 'tab6' ? 'tab-active' : ''}`} data-id="tab6">
-                    <h2>heading of tab 6</h2>
-                    <p>Content of tab 6</p>
+                    <div class="checkbox">
+                      <input id="checkbox-one" type="checkbox" />
+                      <label for="checkbox-one">Do you want to set up cart abandonment feature for this product?s</label>
+                    </div>
                   </div>
                   <div className={`tab ${activeTab === 'tab7' ? 'tab-active' : ''}`} data-id="tab7">
-                    <h2>heading of tab 7</h2>
-                    <p>Content of tab 7</p>
+
                   </div>
                 </div>
               </form>

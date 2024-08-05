@@ -142,6 +142,87 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
+
+/* Checkbox  */
+
+.checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox {
+  margin: 0 0 23px;
+}
+
+.checkbox label {
+  margin: 0;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  text-transform: capitalize;
+  color: var(--title-color);
+}
+
+.checkbox label:before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  transition: all .3s;
+}
+
+.checkbox label:after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 4px;
+  width: 10px;
+  height: 5px;
+  border-left: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  transition: all .3s;
+  opacity: 0;
+}
+
+.checkbox input:checked~label:before {
+  background-color: var(--white-color);
+}
+
+.checkbox input:checked~label:after {
+  opacity: 1;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.checkbox-list {
+  padding-bottom: 15px;
+}
+.checkbox-flex-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+
+
+
+
 /* container */
 .ffc-container {
   max-width: 1170px;
@@ -327,6 +408,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 .ffc-modal .ffc-popup-btn {
   margin-top: 25px;
+  display: flex;
+  gap: 10px;
 }
 
 .ffc-modal .ffc-popup-btn form {
@@ -391,6 +474,7 @@ input[type=number]::-webkit-outer-spin-button {
   justify-content: center;
   cursor: pointer;
 }
+
 
 .ffc-modal .ffc-btn-close svg,
 .ffc-modal .ffc-btn-close path {
@@ -496,7 +580,6 @@ input[type=number]::-webkit-outer-spin-button {
   width: 100%;
   padding: 15px 15px;
   background-color: var(--white-color);
-
 }
 
 .ffc-header-btn {
@@ -556,7 +639,6 @@ input[type=number]::-webkit-outer-spin-button {
 /* header css end */
 
 /* profile */
-
 .ffc-profile-item {
   position: relative;
 }
@@ -838,7 +920,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* tab */
 .ffc-tab-wrapper {
-  padding: 85px 10px;
+  padding: 100px 10px 85px;
   background-color: var(--bg-color);
 }
 
@@ -993,8 +1075,7 @@ input[type=number]::-webkit-outer-spin-button {
   color: var(--title-color);
   font-weight: 400;
   border: none;
-  /*border: 1px solid var(--fbc-border-input-color);*/
-  box-shadow: 0px 20px 34px 0px rgba(0, 0, 0, 0.03) !important;
+  border: 1px solid #ddd;
   border-radius: 6px;
 }
 
@@ -1129,9 +1210,9 @@ input[type=number]::-webkit-outer-spin-button {
 /* setting intg */
 
 .ffc-email-intg-input {
-  background: var(--bg-light-color);
+  background: var(--white-color);
   padding: 20px 20px;
-  border-radius: 5px;
+  border-radius: 8px;
   margin-bottom: 15px;
 }
 
@@ -1301,6 +1382,10 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 @media(max-width:767px) {
+
+  .ffc-head-flex {
+    grid-template-columns: 1fr;
+  }
   .ffc-header-parent {
       gap: 10px;
   }
@@ -1401,7 +1486,7 @@ input[type=number]::-webkit-outer-spin-button {
   }
 
   .ffc-tab-wrapper {
-      padding: 45px 10px;
+      padding: 85px 10px 45px;
   }
 
 }
