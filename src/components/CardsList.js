@@ -19,6 +19,7 @@ function CardsList() {
     document.body.classList.toggle('popup-show', !isModalOpen);
   };
 
+
   const toggleEditModal = (product) => {
     setSelectedProduct(product);
     setEditModalOpen(true);
@@ -178,7 +179,7 @@ function CardsList() {
             </div>
           </div>
         )}
-        {isModalOpen && (
+          {isModalOpen && (
           <div className="ffc-modal">
             <div className="ffc-popup-box ffc-modal-1 popup-box-show">
               <div className="ffc-over" onClick={toggleModal}></div>
@@ -221,6 +222,7 @@ function CardsList() {
             </div>
           </div>
         )}
+
         {isEditModalOpen && selectedProduct && (
           <div className="ffc-tab-wrapper">
               <div class="ffc-section-heading">
@@ -294,7 +296,7 @@ function CardsList() {
                             <input type="checkbox" class="switch-inpt changeStts" name="status"
                               data-type="customer" />
                             <span class="switch-slider"></span>
-                          </label>
+                          </label>                                         
                           <p class="pn-switch-lable">Live
                           </p>
                         </div>
@@ -308,8 +310,8 @@ function CardsList() {
                   </div>
                   <div className={`tab ${activeTab === 'tab2' ? 'tab-active' : ''}`} data-id="tab2">
                     <div className="ffc-btn-wr ffc-btn-right ffc-btn-2">
-                      <button className="ffc-btn">Add Payment
-                        Provider </button>
+                      <Link to="/Setting/tab2" className="ffc-btn">Add Payment
+                        Provider </Link>
                       <button className="ffc-btn ffc-btn-01">Refresh</button>
                     </div>
 
