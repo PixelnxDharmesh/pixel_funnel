@@ -70,7 +70,7 @@ function CardsList() {
   return (
     <div className="ffc-cards-wrapper">
       <div className="ffc-container">
-        {isProductPageVisible && (
+        {isProductPageVisible && (  
           <>
             <div className="ffc-head-flex">
               <div className="ffc-section-heading">
@@ -92,8 +92,6 @@ function CardsList() {
                 <button className="ffc-btn" onClick={toggleModal}>Create New Product</button>
               </div>
             </div>
-
-
 
             <div class="ffc-section-heading">
 

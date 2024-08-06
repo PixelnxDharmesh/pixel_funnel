@@ -7,16 +7,7 @@ const Layout = () => {
   return (
     <>
       <Header />
-      <nav>
-        <ul>
-          <li>
-            <Link to="/products">Products</Link>
-          </li>
-          <li>
-            <Link to="/Settings">Settings</Link>
-          </li>
-        </ul>
-      </nav>
+
       <Outlet />
     </>
   );
