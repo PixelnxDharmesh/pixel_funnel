@@ -25,7 +25,7 @@ function CardsList() {
     setProductPageVisible(false);
     document.body.classList.toggle('popup-show', true);
   };
-
+//view button popup
   const handleBackButtonClick = () => {
     setEditModalOpen(false);
     setProductPageVisible(true);
@@ -239,7 +239,7 @@ function CardsList() {
                   </svg>
                 </a>
                 <h3 class="ffc-heading">{selectedProduct.name}</h3>
-              </div>
+              </div>   
               <form className="ffc-tab-wr" action="" method="">
                 <div className="ffc-tab-list tab-menu">
                   <ul>
@@ -277,7 +277,7 @@ function CardsList() {
                     <div classsName="row">
                       <div className="col-xl-6 col-lg-6 col-sm-12">
                         <div className="ffc-main-input ffc-require">
-                          <label className="ffc-main-label">Title</label>
+                          <label className="ffc-main-label"> Product Title</label>
                           <input
                             className="ffc-custom-input require"
                             data-error="Title is required"
