@@ -7,17 +7,12 @@ const Layout = () => {
   return (
     <>
       <Header />
-      <nav>
-        <ul>
-          <li>
-            <Link to="/products">Products</Link>
-          </li>
-          <li>
-            <Link to="/Settings">Settings</Link>
-          </li>
-        </ul>
-      </nav>
-      <Outlet />
+      <div className="ffc-pages-main">
+        <div className="ffc-container">
+          <Outlet />
+        </div>
+      </div>
+
     </>
   );
 };

@@ -25,7 +25,7 @@ function CardsList() {
     setProductPageVisible(false);
     document.body.classList.toggle('popup-show', true);
   };
-//view button popup
+  //view button popup
   const handleBackButtonClick = () => {
     setEditModalOpen(false);
     setProductPageVisible(true);
@@ -68,10 +68,10 @@ function CardsList() {
   };
 
   return (
-    <div className="ffc-cards-wrapper">
-      <div className="ffc-container">
+    <>
+  
         {isProductPageVisible && (
-          <>
+          <div className="ffc-cards-wrapper">
             <div className="ffc-head-flex">
               <div className="ffc-section-heading">
 
@@ -92,16 +92,9 @@ function CardsList() {
                 <button className="ffc-btn" onClick={toggleModal}>Create New Product</button>
               </div>
             </div>
-
-
-
-            <div class="ffc-section-heading">
-
-            </div>
-
-            <div className="ffc-cards-item-wr">
-              {products.length > 0 ? (
-                products.map((product) => (
+            {products.length > 0 ? (
+              <div className="ffc-cards-item-wr">
+                {products.map((product) => (
                   <div className="ffc-cards-item" key={product.id}>
                     <div className="ffc-cards-item-image">
                       <a href="index.html">
@@ -145,15 +138,15 @@ function CardsList() {
 
                     </div>
                   </div>
-                ))
-              ) : (
-                <div className="ffc-cards-item-nodata">
-                  <img src="/images/no-data.png" alt="nodata" />
-                  <p>No data found</p>
-                </div>
-              )}
-            </div>
-          </>
+                ))}
+              </div>
+            ) : (
+              <div className="ffc-cards-item-nodata">
+                <img src="/images/no-data.png" alt="nodata" />
+                <p>No data found</p>
+              </div>
+            )}
+          </div>
         )}
         {isViewModalOpen && selectedProductForView && (
           <div className="ffc-modal">
@@ -170,8 +163,14 @@ function CardsList() {
                         <li><p>Created On:</p><p><span>{selectedProductForView.createdOn}</span></p></li>
                       </ul>
                     </div>
-                    <div className="ffc-popupFooter ffc-btn-groups ffc-mt">
-                      <button type="button" className="ffc-btn ffc-btn-02 ffc-mr" onClick={() => setViewModalOpen(false)}>Close</button>
+
+                    <div className="ffc-btn-close" onClick={() => setViewModalOpen(false)}>
+                      <span>
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2.84392 29.8121C2.10843 29.8549 1.38508 29.6103 0.826394 29.1301C-0.275383 28.0218 -0.275383 26.2317 0.826394 25.1234L24.9517 0.997988C26.0977 -0.0743124 27.8958 -0.0147039 28.9681 1.13124C29.9378 2.16752 29.9943 3.76029 29.1005 4.86263L4.83299 29.1301C4.28157 29.6034 3.56976 29.8475 2.84392 29.8121Z" fill="black"></path>
+                          <path d="M26.9409 29.8121C26.1954 29.809 25.481 29.513 24.9517 28.9881L0.826287 4.8626C-0.194453 3.67062 -0.0556779 1.87674 1.13631 0.855908C2.20019 -0.0551594 3.7692 -0.0551594 4.83298 0.855908L29.1004 24.9813C30.2461 26.0539 30.3053 27.8522 29.2328 28.9978C29.1901 29.0434 29.146 29.0875 29.1004 29.1302C28.8065 29.3858 28.463 29.5783 28.0915 29.6956C27.72 29.8129 27.3284 29.8526 26.9409 29.8121Z" fill="black"></path>
+                        </svg>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -179,8 +178,6 @@ function CardsList() {
             </div>
           </div>
         )}
-
-
         {isModalOpen && (
           <div className="ffc-modal">
             <div className="ffc-popup-box ffc-modal-1 popup-box-show">
@@ -224,11 +221,8 @@ function CardsList() {
             </div>
           </div>
         )}
-
         {isEditModalOpen && selectedProduct && (
           <div className="ffc-tab-wrapper">
-            <div className="ffc-container">
-
               <div class="ffc-section-heading">
                 <a href="" class="ffc-back-btn" onClick={handleBackButtonClick}>
                   <svg height="16px" width="16px" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0"
@@ -241,7 +235,7 @@ function CardsList() {
                   </svg>
                 </a>
                 <h3 class="ffc-heading">{selectedProduct.name}</h3>
-              </div>   
+              </div>
               <form className="ffc-tab-wr" action="" method="">
                 <div className="ffc-tab-list tab-menu">
                   <ul>
@@ -290,7 +284,26 @@ function CardsList() {
                             autoComplete="off"
                           />
                         </div>
+
+                        <div className="ffc-main-input ffc-require">
+                          <label className="ffc-main-label"> Product Status
+                          </label>
+                        </div>
+                        <div class="pn-switch-wrapper">
+                          <label class="pn-switch-toggle">
+                            <input type="checkbox" class="switch-inpt changeStts" name="status"
+                              data-type="customer" />
+                            <span class="switch-slider"></span>
+                          </label>
+                          <p class="pn-switch-lable">Live
+                          </p>
+                        </div>
+
+
                       </div>
+
+
+
                     </div>
                   </div>
                   <div className={`tab ${activeTab === 'tab2' ? 'tab-active' : ''}`} data-id="tab2">
@@ -356,6 +369,8 @@ function CardsList() {
                         </div>
                       </div>
                     </div>
+
+                    <button>ddd</button>
                   </div>
                   <div className={`tab ${activeTab === 'tab5' ? 'tab-active' : ''}`} data-id="tab5">
 
@@ -371,11 +386,11 @@ function CardsList() {
                   </div>
                 </div>
               </form>
-            </div>
           </div>
         )}
-      </div>
-    </div>
+        </>
+
+
   );
 }
 

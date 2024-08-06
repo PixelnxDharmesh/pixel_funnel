@@ -8,7 +8,8 @@ function Header() {
       <div className="ffc-container">
         <div className="ffc-header-parent">
           <div className="ffc-logo">
-            <Link to="/">Flexi Funnels Clone</Link>
+            <Link to="/"><img src="/images/logo.png" alt="" />
+            </Link>
           </div>
           <div className="ffc-nav-wr">
             <ul className="ffc-nav-list">

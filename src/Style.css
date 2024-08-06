@@ -17,6 +17,7 @@
   --text-color: #919191;
   --transition: all 0.3s;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -24,7 +25,7 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: "Lato", sans-serif;
   overflow-x: hidden;
-  background-color: var(--white-color);
+  background-color: var(--bg-color);
 }
 
 html {
@@ -212,6 +213,7 @@ input[type=number]::-webkit-outer-spin-button {
 .checkbox-list {
   padding-bottom: 15px;
 }
+
 .checkbox-flex-list {
   display: flex;
   align-items: center;
@@ -220,6 +222,81 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 
+
+/**=====================
+    Switch Style
+==========================**/
+.pn-switch-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pn-switch-wrapper .pn-switch-toggle {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.pn-switch-wrapper .pn-switch-toggle input.switch-inpt {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.pn-switch-wrapper .pn-switch-lable {
+  margin-bottom: 8px;
+  color: #2b2e35;
+  font-weight: 600;
+  font-size: 15px;
+  margin: 0;
+}
+
+.switch-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e2e8f0;
+  border: 0;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 9999px;
+  border: 2px solid #0000;
+  height: 100%;
+}
+
+.switch-slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 1.7px;
+  bottom: 1px;
+  background-color: var(--white-color);
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input.switch-inpt:checked+.switch-slider {
+  background-color: var(--primary-color);
+}
+
+input.switch-inpt:checked+.switch-slider:before {
+  -webkit-transform: translateX(19px);
+  -ms-transform: translateX(19px);
+  transform: translateX(19px);
+  background-color: var(--white-color);
+}
+
+.pn-switch-list {
+  margin: 10px 0;
+}
 
 
 
@@ -230,6 +307,15 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* container end*/
+
+
+.ffc-pages-main {
+  
+  padding: 125px 15px;
+
+}
+
+
 
 /* Buttton CSS Start */
 .ffc-btn {
@@ -305,16 +391,17 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 
-.ffc-btn-03 {
+.ffc-btn-04 {
   background: #fff2ec;
   color: #6c757d;
   border: 1px solid #6c757d;
 }
 
-.ffc-btn-03:hover {
+.ffc-btn-04:hover {
   background: #6c757d;
   color: var(--white-color);
 }
+
 /* btn design */
 
 
@@ -418,7 +505,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .ffc-modal .ffc-popup-btn {
-  margin-top: 25px;
+  margin-top: 15px;
   display: flex;
   gap: 10px;
 }
@@ -602,26 +689,6 @@ input[type=number]::-webkit-outer-spin-button {
 .ffc-logo img {
   max-width: 250px;
 }
-
-.ffc-logo a {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  font-size: 22px;
-  font-weight: 600;
-  color: var(--primary-color);
-}
-
-.ffc-logo a span {
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--primary-color);
-}
-
-.ffc-logo img {
-  max-width: 250px;
-}
-
 .ffc-header-parent {
   display: grid;
   grid-template-columns: 1fr auto auto;
@@ -647,6 +714,7 @@ input[type=number]::-webkit-outer-spin-button {
 .ffc-nav-active {
   color: var(--primary-color) !important;
 }
+
 /* header css end */
 
 /* profile */
@@ -753,7 +821,7 @@ input[type=number]::-webkit-outer-spin-button {
 .ffc-cards-wrapper {
   position: relative;
   background: var(--bg-color);
-  padding: 100px 15px 85px;
+  padding: 25px 15px;
 }
 
 .ffc-cards-item-wr {
@@ -932,7 +1000,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* tab */
 .ffc-tab-wrapper {
-  padding: 100px 10px 85px;
+  padding: 25px 0;
   background-color: var(--bg-color);
 }
 
@@ -956,9 +1024,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 }
 
-.ffc-tab-wrapper .tab-menu {
-  
-}
+.ffc-tab-wrapper .tab-menu {}
 
 .ffc-tab-wrapper .tab-menu ul {
   margin: 0;
@@ -1020,6 +1086,7 @@ input[type=number]::-webkit-outer-spin-button {
 .ffc-tab-wrapper .tab-2 {
   display: none;
 }
+
 .ffc-tab-wrapper .tab-2 h2 {
   /* color: rgba(0, 0, 0, .7); */
 }
@@ -1063,6 +1130,7 @@ input[type=number]::-webkit-outer-spin-button {
 .ffc-main-input {
   margin-bottom: 15px;
 }
+
 .ffc-main-label {
   margin-bottom: 15px;
   font-size: 15px;
@@ -1314,6 +1382,7 @@ input[type=number]::-webkit-outer-spin-button {
   gap: 15px;
   margin-top: 50px;
 }
+
 .ffc-email-settings-item {
   border-radius: 12px;
   box-shadow: 0 18px 30px 0 rgba(177, 193, 224, .1);
@@ -1322,6 +1391,7 @@ input[type=number]::-webkit-outer-spin-button {
   position: relative;
   margin-bottom: 30px;
 }
+
 .ffc-email-settings-icons {
   display: flex;
   align-items: center;
@@ -1334,23 +1404,28 @@ input[type=number]::-webkit-outer-spin-button {
   top: -20px;
   left: 20px;
 }
+
 .ffc-email-settings-item ul {
   margin-top: 30px;
 }
+
 .ffc-email-settings-wr ul li {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 10px;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
 }
+
 .ffc-email-settings-wr ul li p {
-   font-size: 14px;
-   color: var(--title-color);
-   font-weight: 500;
-   margin: 0;
+  font-size: 14px;
+  color: var(--title-color);
+  font-weight: 500;
+  margin: 0;
 }
+
 .ffc-email-settings-wr ul li p span {
   font-weight: 700;
 }
+
 .ffc-email-settings-item .ffc-btn {
   min-width: 100px;
   height: 30px;
@@ -1364,6 +1439,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 18px;
   font-weight: 600;
 }
+
 .ffc-tab-inner-heading p {
   margin: 8px 0 0;
   font-size: 14px;
@@ -1372,45 +1448,52 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .ffc-modal .ffc-selected-product-forView {
-   margin-top: 20px;
+  margin-top: 20px;
 }
+
 .ffc-modal .ffc-selected-product-forView p {
   font-size: 15px;
   font-weight: 500;
 }
+
 .ffc-modal .ffc-selected-product-forView p span {
   color: var(--title-color);
 }
+
 .ffc-modal ul.ffc-selected-product-forView li {
   display: flex;
   gap: 15px;
   margin-bottom: 15px;
 }
+
 .ffc-modal ul.ffc-selected-product-forView li:last-child {
   margin-bottom: 0;
 }
+
 @media (min-width: 576px) {
   .ffc-modal .ffc-popup-wr {
-      min-height: calc(100% - 3.5rem);
-      margin: 1.75rem auto;
+    min-height: calc(100% - 3.5rem);
+    margin: 1.75rem auto;
   }
 }
 
 @media(min-width:767px) {
   .ffc-toggle-wr {
-      display: none;
+    display: none;
   }
 }
 
 @media(max-width:991px) {
   .ffc-email-intg-encap {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
+
   .ffc-tab-item {
-      padding: 10px;
+    padding: 10px;
   }
+
   .ffc-tab-wr {
-      padding: 10px;
+    padding: 10px;
   }
 }
 
@@ -1419,114 +1502,111 @@ input[type=number]::-webkit-outer-spin-button {
   .ffc-head-flex {
     grid-template-columns: 1fr;
   }
+
   .ffc-header-parent {
-      gap: 10px;
+    gap: 10px;
   }
 
   .ffc-toggle-wr {
-      margin: 0px;
-      width: 30px;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: var(--bg-light-color);
-      border-radius: 50%;
-      border: 0px;
-      box-shadow: none;
-      font-size: 18px;
-      color: var(--primary-color);
-      position: relative;
+    margin: 0px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-light-color);
+    border-radius: 50%;
+    border: 0px;
+    box-shadow: none;
+    font-size: 18px;
+    color: var(--primary-color);
+    position: relative;
   }
 
   .ffc-nav-wr {
-      position: fixed;
-      background: var(--white-color);
-      width: 260px;
-      top: 65px;
-      left: -260px;
-      bottom: 0;
-      padding: 25px 15px 100px;
-      z-index: 3;
-      min-height: 100%;
-      height: 100vh;
-      overflow-x: hidden;
-      overflow-y: auto;
+    position: fixed;
+    background: var(--white-color);
+    width: 260px;
+    top: 65px;
+    left: -260px;
+    bottom: 0;
+    padding: 25px 15px 100px;
+    z-index: 3;
+    min-height: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 
   .ffc-profile-item a {
-      gap: 5px;
-  }
-
-  .ffc-logo a {
-      font-size: 18px;
+    gap: 5px;
   }
 
   .ffc-profile-logo {
-      display: none;
+    display: none;
   }
 
   .ffc-profile-name h5 {
-      font-size: 12px;
+    font-size: 12px;
   }
 
   .ffc-header-parent ul.ffc-nav-list {
-      display: flex;
-      gap: 20px;
-      flex-direction: column;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
   }
 
   .ffc-modal .ffc-popup-inner {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 
   .ffc-modal .ffc-popup-content h2 {
-      font-size: 22px;
+    font-size: 22px;
   }
 
   .ffc-modal .ffc-popup-content p {
-      font-size: 14px;
+    font-size: 14px;
   }
 
   .ffc-modal .ffc-popup-full {
-      margin: 0 15px;
-      padding: 15px;
+    margin: 0 15px;
+    padding: 15px;
   }
 
 
   .ffc-logo img {
-      max-width: 220px;
+    max-width: 220px;
   }
 
   .ffc-cards-wrapper {
-      padding: 85px 15px 45px;
+    padding: 15px 15px;
   }
 
   .ffc-tab-wr {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 
   .ffc-section-heading .ffc-heading {
-      font-size: 15px;
+    font-size: 15px;
   }
 
   .ffc-btn {
-      min-width: 100px;
-      height: 40px;
-      font-size: 14px;
-      line-height: 40px;
-      padding: 0 10px;
+    min-width: 100px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    padding: 0 10px;
   }
 
   .ffc-tab-wrapper {
-      padding: 85px 10px 45px;
+    padding: 15px 0;
   }
 
 }
 
 @media (max-width: 576px) {
   .ffc-modal .ffc-popup-wr {
-      text-align: center;
-      margin: 50px auto;
+    text-align: center;
+    margin: 50px auto;
   }
 }
