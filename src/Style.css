@@ -821,7 +821,7 @@ input.switch-inpt:checked+.switch-slider:before {
 .ffc-cards-wrapper {
   position: relative;
   background: var(--bg-color);
-  padding: 25px 15px;
+  padding: 25px 0;
 }
 
 .ffc-cards-item-wr {
