@@ -940,6 +940,7 @@ input.switch-inpt:checked+.switch-slider:before {
   margin-bottom: 8px;
 }
 
+
 .ffc-cards-item-details .ffc-product-box li p {
   font-size: 14px;
   font-weight: 600;
@@ -982,7 +983,7 @@ input.switch-inpt:checked+.switch-slider:before {
   background-color: var(--white-color);
   box-shadow: 0 18px 30px 0 rgba(177, 193, 224, .1);
   border-radius: 12px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .ffc-cards-item-nodata img {
@@ -1020,7 +1021,7 @@ input.switch-inpt:checked+.switch-slider:before {
   box-shadow: 0 18px 30px 0 rgba(177, 193, 224, .1);
   border-radius: 12px;
   padding: 20px;
-  margin-top: 20px;
+  margin-top: 30px;
 
 }
 

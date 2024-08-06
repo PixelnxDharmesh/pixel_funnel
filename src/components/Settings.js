@@ -136,7 +136,7 @@ const Settings = () => {
                   <div className="ffc-email-intg-wr">
                     <div className="ffc-email-intg-encap">
                       <div className="ffc-email-intg-img">
-                        <img src="/images/paypal.png" alt="" />
+                        <img src="/images/rpsm.png" alt="" />
                       </div>
                       <div className="ffc-email-intg-info">
                         <span className="ffc-email-intg-name">
@@ -187,9 +187,6 @@ const Settings = () => {
                 <h2>Email Settings</h2>
                 <p>Create Email(Enter Email Type, Email Template Name)</p>
               </div>
-
-
-
               <div className="ffc-btn-wr ffc-btn-right ffc-btn-2 mb-20">
                 <button className="ffc-btn"> Create Email</button>
               </div>
@@ -217,7 +214,6 @@ const Settings = () => {
                   </div>
 
                 </div>
-
                 <div className="ffc-email-settings-item">
                   <div className="ffc-email-settings-icons">
                     <img src="/images/svg/email_svg.svg" alt="" />
@@ -257,52 +253,6 @@ const Settings = () => {
                   </ul>
                   <div className="ffc-btn-wr ffc-btn-2 mt-20">
                     <button className="ffc-btn"> View Detail</button>
-                  </div>
-                  <div className="ffc-email-intg-wr">
-                    <div className="ffc-email-intg-encap">
-                      <div className="ffc-email-intg-img">
-                        <img src="/images/sendgrid.png" alt="" />
-                      </div>
-                      <div className="ffc-email-intg-info">
-                        <span className="ffc-email-intg-name">
-                          demo@company.com
-                        </span>
-                        <button type="button" className="ffc-btn" onClick={() => toggleSettings('email2')}>Setting</button>
-                      </div>
-                    </div>
-                    {settingsVisibility['email2'] && (
-                      <div className="ffc-email-intg-input">
-                        <div className="ffc-main-input ffc-require">
-                          <label className="ffc-main-label">Account Name
-                            <span className="text-danger">*</span>
-                          </label>
-                          <input className="ffc-custom-input require" data-error="Title is required"
-                            type="text" placeholder="Enter your account name" name="title" value="demo@company.com"
-                            autoComplete="off" />
-                        </div>
-                        <div className="ffc-main-input ffc-require">
-                          <label className="ffc-main-label">Key
-                            <span className="text-danger">*</span>
-                          </label>
-                          <input className="ffc-custom-input require" data-error="Title is required"
-                            type="text" placeholder="Enter your account key" name="title" value="Key"
-                            autoComplete="off" />
-                        </div>
-                        <div className="ffc-main-input ffc-require">
-                          <label className="ffc-main-label">Secret
-                            <span className="text-danger">*</span>
-                          </label>
-                          <input className="ffc-custom-input require" data-error="Title is required"
-                            type="text" placeholder="Enter your account secret" name="title" value="secret"
-                            autoComplete="off" />
-                        </div>
-                        <div className="ffc-btn-iintg-infon">
-                          <button type="button" className="ffc-btn ffc-btn-01">Disable</button>
-                          <button type="button" className="ffc-btn ffc-btn-02">Remove</button>
-                          <button type="button" className="ffc-btn ffc-btn-03">Update</button>
-                        </div>
-                      </div>
-                    )}
                   </div>
                 </div>
               </div>
