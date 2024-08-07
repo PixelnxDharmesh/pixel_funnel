@@ -1228,6 +1228,11 @@ input.switch-inpt:checked+.switch-slider:before {
   border-color: #ddd;
 
 }
+
+.ffc-custom-select .css-hlgwow {
+  padding: 5px 25px;
+}
+
 /* select css start */
 .ffc-price-flex {
   display: grid;

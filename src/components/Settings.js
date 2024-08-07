@@ -305,6 +305,9 @@ const Settings = () => {
             />
           </div>
           
+          <div className="ffc-main-input ffc-require">
+            <label className="ffc-main-label">Email Content</label>
+          </div>
           <CKEditor
             editor={ClassicEditor}
             data="<p>Enter Content</p>"
