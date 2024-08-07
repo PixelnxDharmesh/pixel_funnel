@@ -338,8 +338,8 @@ const Settings = () => {
       </Popup>
       <Popup isOpen={popupType === 'createEmail'} onClose={closePopup}>
 
-      <h2 className='ffc-modal-heading'>Create Email Template
-      </h2>
+        <h2 className='ffc-modal-heading'>Create Email Template
+        </h2>
 
         <div className="ffc-createEmail-temp">
           <div className="ffc-main-input ffc-require">
@@ -350,6 +350,7 @@ const Settings = () => {
               onChange={emailType}
               options={emailTypeoptions}
             />
+            
           </div>
 
           <div className="ffc-main-input ffc-require">
