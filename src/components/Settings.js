@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Select from 'react-select'
+
 import Popup from './Popup'; // Make sure the path to the Popup component is correct
 
 const Settings = () => {
   const [activeTab, setActiveTab] = useState('tab1');
   const [settingsVisibility, setSettingsVisibility] = useState({});
   const [popupType, setPopupType] = useState(null);
+  const [selecteOptionmain, setselecteOptionmain] = useState(null);
+
 
   const handleTabClick = (tabId) => {
     setActiveTab(tabId);
@@ -26,6 +30,17 @@ const Settings = () => {
     setPopupType(null);
   };
 
+
+  const handleChange = (val) => {
+    setselecteOptionmain(val)
+  }
+
+  const options = [
+    { value: 'USD', label: 'USD ($)' },
+    { value: 'GBP', label: 'GBP (£)' },
+    { value: 'EUR', label: 'EUR (€)' }
+  ]
+
   return (
     <div className="ffc-tab-wrapper">
       <div className="ffc-container">
@@ -39,7 +54,6 @@ const Settings = () => {
           </Link>
           <h3 className="ffc-heading">Setting</h3>
         </div>
-
         <form className="ffc-tab-wr" action="" method="">
           <div className="ffc-tab-list tab-menu">
             <ul>
@@ -136,53 +150,86 @@ const Settings = () => {
               </div>
             </div>
             <div className={`tab ${activeTab === 'tab3' ? 'tab-active' : ''}`} data-id="tab3">
+
+
+              <div className='ffc-head-flex'>
+                <div className='ffc-tab-inner-heading'>
+                  <h2>Email Settings</h2>
+                  <p>Create Email(Enter Email Type, Email Template Name)</p>
+                </div>
+
               <div className="ffc-btn-wr ffc-btn-right ffc-btn-2">
-                <button type="button" className="ffc-btn" onClick={() => openPopup('createEmail')}>Create Email</button>
-              </div>
-              <div className="row mt-20">
-                <div className="col-xl-6 col-lg-6 col-sm-12">
-                  <div className="ffc-email-intg-wr">
-                    <div className="ffc-email-intg-encap">
-                      <div className="ffc-email-intg-img">
-                        <img src="/images/default.png" alt="" />
-                      </div>
-                      <div className="ffc-email-intg-info">
-                        <span className="ffc-email-intg-name">
-                          demo@company.com
-                        </span>
-                        <button type="button" className="ffc-btn" onClick={() => toggleSettings('email1')}>Setting</button>
-                      </div>
-                    </div>
-                    {settingsVisibility['email1'] && (
-                      <div className="ffc-email-intg-input">
-                        <div className="ffc-main-input ffc-require">
-                          <label className="ffc-main-label">Account Name
-                            <span className="text-danger">*</span>
-                          </label>
-                          <input className="ffc-custom-input require" data-error="Title is required" type="text" placeholder="Enter your account name" name="title" value="demo@company.com" autoComplete="off" />
-                        </div>
-                        <div className="ffc-main-input ffc-require">
-                          <label className="ffc-main-label">SMTP
-                            <span className="text-danger">*</span>
-                          </label>
-                          <input className="ffc-custom-input require" data-error="Title is required" type="text" placeholder="Enter your SMTP" name="title" value="SMTP" autoComplete="off" />
-                        </div>
-                        <div className="ffc-main-input ffc-require">
-                          <label className="ffc-main-label">Password
-                            <span className="text-danger">*</span>
-                          </label>
-                          <input className="ffc-custom-input require" data-error="Title is required" type="password" placeholder="Enter your password" name="title" value="Password" autoComplete="off" />
-                        </div>
-                        <div className="ffc-btn-iintg-infon">
-                          <button type="button" className="ffc-btn ffc-btn-01">Disable</button>
-                          <button type="button" className="ffc-btn ffc-btn-02">Remove</button>
-                          <button type="button" className="ffc-btn ffc-btn-03">Update</button>
-                        </div>
-                      </div>
-                    )}
-                  </div>
+                  <button type="button" className="ffc-btn" onClick={() => openPopup('createEmail')}>Create Email</button>
                 </div>
               </div>
+              
+               <div className="ffc-email-settings-wr">
+                 <div className="ffc-email-settings-item">
+                   <div className="ffc-email-settings-icons">
+                     <img src="/images/svg/email_svg.svg" alt="" />
+                   </div>
+
+                   <ul className="">
+                     <li className="">
+                       <p>Email</p>
+                       <p> <span>Demo Name</span></p>
+                     </li>
+                     <li className="">
+                       <p>Email Type</p>
+                       <p> <span>Demo Type</span></p>
+                     </li>
+                   </ul>
+                   <div className="ffc-btn-wr ffc-btn-2 mt-20">
+                     <button className="ffc-btn">View Detail</button>
+                   </div>
+
+                 </div>
+
+                 <div className="ffc-email-settings-item">
+                   <div className="ffc-email-settings-icons">
+                     <img src="/images/svg/email_svg.svg" alt="" />
+                   </div>
+                   <ul className="">
+                     <li className="">
+                       <p>Email</p>
+                       <p> <span>Demo Name</span></p>
+                     </li>
+                     <li className="">
+                       <p>Email Type</p>
+                       <p> <span>Demo Type</span></p>
+                     </li>
+                   </ul>
+                   <div className="ffc-btn-wr ffc-btn-2 mt-20">
+                     <button className="ffc-btn">View Detail</button>
+                   </div>
+
+                 </div>
+                 <div className="ffc-email-settings-item">
+                   <div className="ffc-email-settings-icons">
+                     <img src="/images/svg/email_svg.svg" alt="" />
+                   </div>
+                   <ul className="">
+                     <li className="">
+                       <p>Email</p>
+                       <p> <span>Demo Name</span></p>
+                     </li>
+                     <li className="">
+                       <p>Email Type</p>
+                       <p> <span>Demo Type</span></p>
+                     </li>
+                   </ul>
+                   <div className="ffc-btn-wr ffc-btn-2 mt-20">
+                     <button className="ffc-btn">View Detail</button>
+                   </div>
+
+                 </div>
+               </div>
+
+
+
+
+
+
             </div>
           </div>
         </form>
@@ -199,17 +246,16 @@ const Settings = () => {
       <Popup isOpen={popupType === 'createEmail'} onClose={closePopup}>
         <div className="row">
 
-          <div className="col-xl-6 col-lg-6 col-sm-12">
-            <div className="ffc-main-input ffc-require">
-              <label className="ffc-main-label">Email Type</label>
-              <select className="ffc-select-wr" name="state">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-              </select>
-            </div>
+          <div className="ffc-main-input ffc-require">
+            <label className="ffc-main-label"> Email Type</label>
+            <Select className='ffc-custom-select'
+
+              value={selecteOptionmain}
+              onChange={handleChange}
+              options={options}
+            />
           </div>
+
           <div className="col-xl-6 col-lg-6 col-sm-12">
             <div className="ffc-main-input ffc-require">
               <label className="ffc-main-label">Email Template Name</label>
@@ -226,17 +272,14 @@ const Settings = () => {
             </div>
           </div>
 
-          <div className="col-xl-6 col-lg-6 col-sm-12">
-            <div className="ffc-main-input ffc-require">
-              <label className="ffc-main-label">Choose Email Template
-              </label>
-              <select className="ffc-select-wr" name="state">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-              </select>
-            </div>
+          <div className="ffc-main-input ffc-require">
+            <label className="ffc-main-label"> Choose Email Template</label>
+            <Select className='ffc-custom-select'
+
+              value={selecteOptionmain}
+              onChange={handleChange}
+              options={options}
+            />
           </div>
 
           <div className="col-xl-6 col-lg-6 col-sm-12">
