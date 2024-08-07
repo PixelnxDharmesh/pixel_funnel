@@ -26,6 +26,7 @@ const Popup = ({ isOpen, onClose, children }) => {
                 </div>
             </div>
         </div>
+        
     );
 };
 

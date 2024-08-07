@@ -21,8 +21,10 @@ function CardsList() {
   const [visibleOptionsProductId, setVisibleOptionsProductId] = useState(null);
   const [isViewModalOpen, setViewModalOpen] = useState(false);
   const [selectedProductForView, setSelectedProductForView] = useState(null);
-  const [selecteOptionmain, setselecteOptionmain] = useState(null);
+  const [selecteOptionmain,setselecteOptionmain] = useState(null);
   const [popupType, setPopupType] = useState(null);
+  const [popupType1, setPopupType1] = useState(null);
+  
 
 
   const toggleModal = () => {
@@ -94,8 +96,16 @@ function CardsList() {
     setPopupType(type);
   };
 
-  const closePopup = () => {
+  const closePopup= () => {
     setPopupType(null);
+  };
+
+  const openPopup1 = (type) => {
+    setPopupType1(type);
+  };
+
+  const closePopup1 = () => {
+    setPopupType1(null);
   };
 
 
@@ -376,7 +386,7 @@ function CardsList() {
                         options={options}
                       />
 
-                      <button className='ffc-btn'>Set Product Price</button>
+                      <button className='ffc-btn'   onClick={() => openPopup1('Set price to your product')}>Set Product Price</button>
                     </div>
 
                   </div>
@@ -430,6 +440,10 @@ function CardsList() {
           </form>
           <Popup isOpen={popupType === 'add Statistics'} onClose={closePopup}>
         <h2>Add Statistics</h2>
+        {/* Add  content */}
+      </Popup>
+      <Popup isOpen={popupType1 === 'Set price to your product'} onClose={closePopup1}>
+        <h2>Set price to your product</h2>
         {/* Add  content */}
       </Popup>
         </div>

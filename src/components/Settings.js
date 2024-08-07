@@ -14,6 +14,7 @@ const Settings = () => {
   const [popupType, setPopupType] = useState(null);
   const [selecteEmailTemplate, setselecteEmailTemplate] = useState(null);
   const [selectEmailType, setselectEmailType] = useState(null);
+  const [editorData, setEditorData] = useState('');
 
 
 
@@ -61,7 +62,7 @@ const Settings = () => {
   ]
 
 
-  const [editorData, setEditorData] = useState('');
+
 
 
   return (
