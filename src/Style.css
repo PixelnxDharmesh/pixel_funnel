@@ -467,7 +467,7 @@ input.switch-inpt:checked+.switch-slider:before {
   background: var(--popup-bg);
   position: relative;
   z-index: 99999;
-  width: 600px;
+  width: 800px;
 }
 
 .ffc-modal .ffc-popup-inner {
@@ -1454,6 +1454,9 @@ input.switch-inpt:checked+.switch-slider:before {
 
 .ffc-modal ul.ffc-selected-product-forView li:last-child {
   margin-bottom: 0;
+}
+.ck.ck-editor__main>.ck-editor__editable {
+  min-height: 160px;
 }
 
 @media (min-width: 576px) {
