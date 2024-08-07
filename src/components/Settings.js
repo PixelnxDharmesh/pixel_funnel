@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Select from 'react-select'
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+
 
 import Popup from './Popup'; // Make sure the path to the Popup component is correct
 
@@ -8,7 +11,9 @@ const Settings = () => {
   const [activeTab, setActiveTab] = useState('tab1');
   const [settingsVisibility, setSettingsVisibility] = useState({});
   const [popupType, setPopupType] = useState(null);
-  const [selecteOptionmain, setselecteOptionmain] = useState(null);
+  const [selecteEmailTemplate, setselecteEmailTemplate] = useState(null);
+  const [selectEmailType, setselectEmailType] = useState(null);
+
 
 
   const handleTabClick = (tabId) => {
@@ -31,15 +36,32 @@ const Settings = () => {
   };
 
 
-  const handleChange = (val) => {
-    setselecteOptionmain(val)
+  const emailType = (val) => {
+    setselectEmailType(val)
   }
 
-  const options = [
-    { value: 'USD', label: 'USD ($)' },
-    { value: 'GBP', label: 'GBP (£)' },
-    { value: 'EUR', label: 'EUR (€)' }
+  const emailTypeoptions = [
+    { value: '01', label: '1' },
+    { value: '02', label: '2' },
+    { value: '03', label: '3' }
   ]
+
+
+
+
+  const EmailTemplate = (val) => {
+    setselecteEmailTemplate(val)
+  }
+
+  const EmailTemplateoptions = [
+    { value: 'A', label: 'A' },
+    { value: 'B', label: 'B' },
+    { value: 'C', label: 'C' }
+  ]
+
+
+  const [editorData, setEditorData] = useState('');
+
 
   return (
     <div className="ffc-tab-wrapper">
@@ -68,35 +90,33 @@ const Settings = () => {
                 <button type="button" className="ffc-btn" onClick={() => openPopup('addAutoresponder')}>Add Autoresponder</button>
               </div>
               <div className="row mt-20">
-                <div className="col-xl-6 col-lg-6 col-sm-12">
-                  <div className="ffc-email-intg-wr">
-                    <div className="ffc-email-intg-encap">
-                      <div className="ffc-email-intg-img">
-                        <img src="/images/aweber.png" alt="" />
+                <div className="ffc-email-intg-wr">
+                  <div className="ffc-email-intg-encap">
+                    <div className="ffc-email-intg-img">
+                      <img src="/images/aweber.png" alt="" />
+                    </div>
+                    <div className="ffc-email-intg-info">
+                      <span className="ffc-email-intg-name">
+                        demo@company.com
+                      </span>
+                      <button type="button" className="ffc-btn" onClick={() => toggleSettings('autoresponder1')}>Setting</button>
+                    </div>
+                  </div>
+                  {settingsVisibility['autoresponder1'] && (
+                    <div className="ffc-email-intg-input">
+                      <div className="ffc-main-input ffc-require">
+                        <label className="ffc-main-label">Account Name
+                          <span className="text-danger">*</span>
+                        </label>
+                        <input className="ffc-custom-input require" data-error="Title is required" type="text" placeholder="Enter your account name" name="title" value="demo@company.com" autoComplete="off" />
                       </div>
-                      <div className="ffc-email-intg-info">
-                        <span className="ffc-email-intg-name">
-                          demo@company.com
-                        </span>
-                        <button type="button" className="ffc-btn" onClick={() => toggleSettings('autoresponder1')}>Setting</button>
+                      <div className="ffc-btn-iintg-infon">
+                        <button type="button" className="ffc-btn ffc-btn-01">Disable</button>
+                        <button type="button" className="ffc-btn ffc-btn-02">Remove</button>
+                        <button type="button" className="ffc-btn ffc-btn-03">Update</button>
                       </div>
                     </div>
-                    {settingsVisibility['autoresponder1'] && (
-                      <div className="ffc-email-intg-input">
-                        <div className="ffc-main-input ffc-require">
-                          <label className="ffc-main-label">Account Name
-                            <span className="text-danger">*</span>
-                          </label>
-                          <input className="ffc-custom-input require" data-error="Title is required" type="text" placeholder="Enter your account name" name="title" value="demo@company.com" autoComplete="off" />
-                        </div>
-                        <div className="ffc-btn-iintg-infon">
-                          <button type="button" className="ffc-btn ffc-btn-01">Disable</button>
-                          <button type="button" className="ffc-btn ffc-btn-02">Remove</button>
-                          <button type="button" className="ffc-btn ffc-btn-03">Update</button>
-                        </div>
-                      </div>
-                    )}
-                  </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -105,130 +125,121 @@ const Settings = () => {
                 <button type="button" className="ffc-btn" onClick={() => openPopup('addPayment')}>Add Payment</button>
               </div>
               <div className="row">
-                <div className="col-xl-6 col-lg-6 col-sm-12">
-                  <div className="ffc-email-intg-wr">
-                    <div className="ffc-email-intg-encap">
-                      <div className="ffc-email-intg-img">
-                        <img src="/images/stripe.png" alt="" />
+                <div className="ffc-email-intg-wr">
+                  <div className="ffc-email-intg-encap">
+                    <div className="ffc-email-intg-img">
+                      <img src="/images/stripe.png" alt="" />
+                    </div>
+                    <div className="ffc-email-intg-info">
+                      <span className="ffc-email-intg-name">
+                        demo@company.com
+                      </span>
+                      <button type="button" className="ffc-btn" onClick={() => toggleSettings('payment1')}>Setting</button>
+                    </div>
+                  </div>
+                  {settingsVisibility['payment1'] && (
+                    <div className="ffc-email-intg-input">
+                      <div className="ffc-main-input ffc-require">
+                        <label className="ffc-main-label">Account Name
+                          <span className="text-danger">*</span>
+                        </label>
+                        <input className="ffc-custom-input require" data-error="Title is required" type="text" placeholder="Enter your account name" name="title" value="demo@company.com" autoComplete="off" />
                       </div>
-                      <div className="ffc-email-intg-info">
-                        <span className="ffc-email-intg-name">
-                          demo@company.com
-                        </span>
-                        <button type="button" className="ffc-btn" onClick={() => toggleSettings('payment1')}>Setting</button>
+                      <div className="ffc-main-input ffc-require">
+                        <label className="ffc-main-label">Key
+                          <span className="text-danger">*</span>
+                        </label>
+                        <input className="ffc-custom-input require" data-error="Title is required" type="text" placeholder="Enter your account key" name="title" value="Key" autoComplete="off" />
+                      </div>
+                      <div className="ffc-main-input ffc-require">
+                        <label className="ffc-main-label">Token
+                          <span className="text-danger">*</span>
+                        </label>
+                        <input className="ffc-custom-input require" data-error="Title is required" type="text" placeholder="Enter your account token" name="title" value="Token" autoComplete="off" />
+                      </div>
+                      <div className="ffc-btn-iintg-infon">
+                        <button type="button" className="ffc-btn ffc-btn-01">Disable</button>
+                        <button type="button" className="ffc-btn ffc-btn-02">Remove</button>
+                        <button type="button" className="ffc-btn ffc-btn-03">Update</button>
                       </div>
                     </div>
-                    {settingsVisibility['payment1'] && (
-                      <div className="ffc-email-intg-input">
-                        <div className="ffc-main-input ffc-require">
-                          <label className="ffc-main-label">Account Name
-                            <span className="text-danger">*</span>
-                          </label>
-                          <input className="ffc-custom-input require" data-error="Title is required" type="text" placeholder="Enter your account name" name="title" value="demo@company.com" autoComplete="off" />
-                        </div>
-                        <div className="ffc-main-input ffc-require">
-                          <label className="ffc-main-label">Key
-                            <span className="text-danger">*</span>
-                          </label>
-                          <input className="ffc-custom-input require" data-error="Title is required" type="text" placeholder="Enter your account key" name="title" value="Key" autoComplete="off" />
-                        </div>
-                        <div className="ffc-main-input ffc-require">
-                          <label className="ffc-main-label">Token
-                            <span className="text-danger">*</span>
-                          </label>
-                          <input className="ffc-custom-input require" data-error="Title is required" type="text" placeholder="Enter your account token" name="title" value="Token" autoComplete="off" />
-                        </div>
-                        <div className="ffc-btn-iintg-infon">
-                          <button type="button" className="ffc-btn ffc-btn-01">Disable</button>
-                          <button type="button" className="ffc-btn ffc-btn-02">Remove</button>
-                          <button type="button" className="ffc-btn ffc-btn-03">Update</button>
-                        </div>
-                      </div>
-                    )}
-                  </div>
+                  )}
                 </div>
               </div>
             </div>
             <div className={`tab ${activeTab === 'tab3' ? 'tab-active' : ''}`} data-id="tab3">
-
-
               <div className='ffc-head-flex'>
                 <div className='ffc-tab-inner-heading'>
                   <h2>Email Settings</h2>
                   <p>Create Email(Enter Email Type, Email Template Name)</p>
                 </div>
 
-              <div className="ffc-btn-wr ffc-btn-right ffc-btn-2">
+                <div className="ffc-btn-wr ffc-btn-right ffc-btn-2">
                   <button type="button" className="ffc-btn" onClick={() => openPopup('createEmail')}>Create Email</button>
                 </div>
               </div>
-              
-               <div className="ffc-email-settings-wr">
-                 <div className="ffc-email-settings-item">
-                   <div className="ffc-email-settings-icons">
-                     <img src="/images/svg/email_svg.svg" alt="" />
-                   </div>
 
-                   <ul className="">
-                     <li className="">
-                       <p>Email</p>
-                       <p> <span>Demo Name</span></p>
-                     </li>
-                     <li className="">
-                       <p>Email Type</p>
-                       <p> <span>Demo Type</span></p>
-                     </li>
-                   </ul>
-                   <div className="ffc-btn-wr ffc-btn-2 mt-20">
-                     <button className="ffc-btn">View Detail</button>
-                   </div>
+              <div className="ffc-email-settings-wr">
+                <div className="ffc-email-settings-item">
+                  <div className="ffc-email-settings-icons">
+                    <img src="/images/svg/email_svg.svg" alt="" />
+                  </div>
 
-                 </div>
+                  <ul className="">
+                    <li className="">
+                      <p>Email</p>
+                      <p> <span>Demo Name</span></p>
+                    </li>
+                    <li className="">
+                      <p>Email Type</p>
+                      <p> <span>Demo Type</span></p>
+                    </li>
+                  </ul>
+                  <div className="ffc-btn-wr ffc-btn-2 mt-20">
+                    <button className="ffc-btn">View Detail</button>
+                  </div>
 
-                 <div className="ffc-email-settings-item">
-                   <div className="ffc-email-settings-icons">
-                     <img src="/images/svg/email_svg.svg" alt="" />
-                   </div>
-                   <ul className="">
-                     <li className="">
-                       <p>Email</p>
-                       <p> <span>Demo Name</span></p>
-                     </li>
-                     <li className="">
-                       <p>Email Type</p>
-                       <p> <span>Demo Type</span></p>
-                     </li>
-                   </ul>
-                   <div className="ffc-btn-wr ffc-btn-2 mt-20">
-                     <button className="ffc-btn">View Detail</button>
-                   </div>
+                </div>
 
-                 </div>
-                 <div className="ffc-email-settings-item">
-                   <div className="ffc-email-settings-icons">
-                     <img src="/images/svg/email_svg.svg" alt="" />
-                   </div>
-                   <ul className="">
-                     <li className="">
-                       <p>Email</p>
-                       <p> <span>Demo Name</span></p>
-                     </li>
-                     <li className="">
-                       <p>Email Type</p>
-                       <p> <span>Demo Type</span></p>
-                     </li>
-                   </ul>
-                   <div className="ffc-btn-wr ffc-btn-2 mt-20">
-                     <button className="ffc-btn">View Detail</button>
-                   </div>
+                <div className="ffc-email-settings-item">
+                  <div className="ffc-email-settings-icons">
+                    <img src="/images/svg/email_svg.svg" alt="" />
+                  </div>
+                  <ul className="">
+                    <li className="">
+                      <p>Email</p>
+                      <p> <span>Demo Name</span></p>
+                    </li>
+                    <li className="">
+                      <p>Email Type</p>
+                      <p> <span>Demo Type</span></p>
+                    </li>
+                  </ul>
+                  <div className="ffc-btn-wr ffc-btn-2 mt-20">
+                    <button className="ffc-btn">View Detail</button>
+                  </div>
 
-                 </div>
-               </div>
+                </div>
+                <div className="ffc-email-settings-item">
+                  <div className="ffc-email-settings-icons">
+                    <img src="/images/svg/email_svg.svg" alt="" />
+                  </div>
+                  <ul className="">
+                    <li className="">
+                      <p>Email</p>
+                      <p> <span>Demo Name</span></p>
+                    </li>
+                    <li className="">
+                      <p>Email Type</p>
+                      <p> <span>Demo Type</span></p>
+                    </li>
+                  </ul>
+                  <div className="ffc-btn-wr ffc-btn-2 mt-20">
+                    <button className="ffc-btn">View Detail</button>
+                  </div>
 
-
-
-
-
+                </div>
+              </div>
 
             </div>
           </div>
@@ -250,53 +261,71 @@ const Settings = () => {
             <label className="ffc-main-label"> Email Type</label>
             <Select className='ffc-custom-select'
 
-              value={selecteOptionmain}
-              onChange={handleChange}
-              options={options}
+              value={selectEmailType}
+              onChange={emailType}
+              options={emailTypeoptions}
             />
           </div>
 
-          <div className="col-xl-6 col-lg-6 col-sm-12">
-            <div className="ffc-main-input ffc-require">
-              <label className="ffc-main-label">Email Template Name</label>
-              <input
-                className="ffc-custom-input require"
-                data-error="Title is required"
-                type="text"
-                placeholder="Email Template Name"
-                name="title"
-                value=""
-                onChange=""
-                autoComplete="off"
-              />
-            </div>
+          <div className="ffc-main-input ffc-require">
+            <label className="ffc-main-label">Email Template Name</label>
+            <input
+              className="ffc-custom-input require"
+              data-error="Title is required"
+              type="text"
+              placeholder="Email Template Name"
+              name="title"
+              value=""
+              onChange=""
+              autoComplete="off"
+            />
           </div>
 
           <div className="ffc-main-input ffc-require">
             <label className="ffc-main-label"> Choose Email Template</label>
             <Select className='ffc-custom-select'
 
-              value={selecteOptionmain}
-              onChange={handleChange}
-              options={options}
+              value={selecteEmailTemplate}
+              onChange={EmailTemplate}
+              options={EmailTemplateoptions}
             />
           </div>
 
-          <div className="col-xl-6 col-lg-6 col-sm-12">
-            <div className="ffc-main-input ffc-require">
-              <label className="ffc-main-label">Email Subject</label>
-              <input
-                className="ffc-custom-input require"
-                data-error="Title is required"
-                type="text"
-                placeholder="Email Subject"
-                name="title"
-                value=""
-                onChange=""
-                autoComplete="off"
-              />
-            </div>
+          <div className="ffc-main-input ffc-require">
+            <label className="ffc-main-label">Email Subject</label>
+            <input
+              className="ffc-custom-input require"
+              data-error="Title is required"
+              type="text"
+              placeholder="Email Subject"
+              name="title"
+              value=""
+              onChange=""
+              autoComplete="off"
+            />
           </div>
+          
+          <CKEditor
+            editor={ClassicEditor}
+            data="<p>Enter Content</p>"
+            onReady={editor => {
+              // You can store the "editor" and use when it is needed.
+              console.log('Editor is ready to use!', editor);
+            }}
+            onChange={(event, editor) => {
+              const data = editor.getData();
+              console.log(data)
+              setEditorData(data);
+              console.log({ event, editor, data });
+            }}
+            onBlur={(event, editor) => {
+              console.log('Blur.', editor);
+            }}
+            onFocus={(event, editor) => {
+              console.log('Focus.', editor);
+            }}
+          />
+
         </div>
         {/* Add  content */}
       </Popup>
