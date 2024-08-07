@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Popup from './Popup'; // Make sure the path to the Popup component is correct
+import Popup from './Popup';
 
 const Settings = () => {
   const [activeTab, setActiveTab] = useState('tab1');
@@ -139,50 +139,7 @@ const Settings = () => {
               <div className="ffc-btn-wr ffc-btn-right ffc-btn-2">
                 <button type="button" className="ffc-btn" onClick={() => openPopup('createEmail')}>Create Email</button>
               </div>
-              <div className="row mt-20">
-                <div className="col-xl-6 col-lg-6 col-sm-12">
-                  <div className="ffc-email-intg-wr">
-                    <div className="ffc-email-intg-encap">
-                      <div className="ffc-email-intg-img">
-                        <img src="/images/default.png" alt="" />
-                      </div>
-                      <div className="ffc-email-intg-info">
-                        <span className="ffc-email-intg-name">
-                          demo@company.com
-                        </span>
-                        <button type="button" className="ffc-btn" onClick={() => toggleSettings('email1')}>Setting</button>
-                      </div>
-                    </div>
-                    {settingsVisibility['email1'] && (
-                      <div className="ffc-email-intg-input">
-                        <div className="ffc-main-input ffc-require">
-                          <label className="ffc-main-label">Account Name
-                            <span className="text-danger">*</span>
-                          </label>
-                          <input className="ffc-custom-input require" data-error="Title is required" type="text" placeholder="Enter your account name" name="title" value="demo@company.com" autoComplete="off" />
-                        </div>
-                        <div className="ffc-main-input ffc-require">
-                          <label className="ffc-main-label">SMTP
-                            <span className="text-danger">*</span>
-                          </label>
-                          <input className="ffc-custom-input require" data-error="Title is required" type="text" placeholder="Enter your SMTP" name="title" value="SMTP" autoComplete="off" />
-                        </div>
-                        <div className="ffc-main-input ffc-require">
-                          <label className="ffc-main-label">Password
-                            <span className="text-danger">*</span>
-                          </label>
-                          <input className="ffc-custom-input require" data-error="Title is required" type="password" placeholder="Enter your password" name="title" value="Password" autoComplete="off" />
-                        </div>
-                        <div className="ffc-btn-iintg-infon">
-                          <button type="button" className="ffc-btn ffc-btn-01">Disable</button>
-                          <button type="button" className="ffc-btn ffc-btn-02">Remove</button>  
-                          <button type="button" className="ffc-btn ffc-btn-03">Update</button>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </div>
         </form>
@@ -193,7 +150,7 @@ const Settings = () => {
         {/* Add  content */}
       </Popup>
       <Popup isOpen={popupType === 'addPayment'} onClose={closePopup}>
-        <h2>Add Payment</h2>
+        <h2>Add Payment</h2> 
       {/* Add  content */}
       </Popup>
       <Popup isOpen={popupType === 'createEmail'} onClose={closePopup}>

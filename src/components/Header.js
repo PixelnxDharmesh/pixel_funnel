@@ -22,7 +22,7 @@ function Header() {
                                    
             </ul>
           </div>
-          <div className="ffc-profile-item">
+          <div className="ffc-profile-item"> 
             <a href="">
               <div className="ffc-profile-logo">
                 <span>A</span>
