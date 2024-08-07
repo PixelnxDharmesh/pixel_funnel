@@ -392,14 +392,13 @@ input.switch-inpt:checked+.switch-slider:before {
 
 
 .ffc-btn-04 {
-  background: #fff2ec;
-  color: #6c757d;
+  background: #6c757d;
+  color: var(--white-color);
   border: 1px solid #6c757d;
 }
 
 .ffc-btn-04:hover {
   background: #6c757d;
-  color: var(--white-color);
 }
 
 /* btn design */
@@ -419,6 +418,7 @@ input.switch-inpt:checked+.switch-slider:before {
 .ffc-modal h6 {
   font-family: 'Roboto', sans-serif;
 }
+
 
 .ffc-modal a,
 .ffc-modal span,
@@ -487,13 +487,13 @@ input.switch-inpt:checked+.switch-slider:before {
   padding: 0;
   color: var(--primary-color);
 }
-
-.ffc-modal .ffc-popup-content h2 {
-  font-size: 24px;
+.ffc-modal .ffc-popup-content .ffc-modal-heading {
+  font-size: 20px;
   font-weight: 600;
-  margin: 0 0 15px;
+  margin: 0 0 25px;
   padding: 0;
-  color: var(--primary-color);
+  color: var(--title-color);
+  text-align: left;
 }
 
 .ffc-modal .ffc-popup-content p {
@@ -1302,6 +1302,10 @@ input.switch-inpt:checked+.switch-slider:before {
   margin-bottom: 15px;
   padding: 15px;
 }
+.ffc-email-intg-encap:last-child {
+  margin-bottom: 0;
+
+}
 
 .ffc-email-intg-info {
   display: flex;
@@ -1464,6 +1468,13 @@ input.switch-inpt:checked+.switch-slider:before {
   min-height: 160px;
 }
 
+
+.ffc-btn-flex {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
 @media (min-width: 576px) {
   .ffc-modal .ffc-popup-wr {
     min-height: calc(100% - 3.5rem);
@@ -1471,6 +1482,11 @@ input.switch-inpt:checked+.switch-slider:before {
   }
 }
 
+@media(max-width:991px) {
+  .ck.ck-toolbar.ck-toolbar_grouping>.ck-toolbar__items {
+    flex-wrap: wrap !important;
+  }
+}
 @media(min-width:767px) {
   .ffc-toggle-wr {
     display: none;
@@ -1492,7 +1508,15 @@ input.switch-inpt:checked+.switch-slider:before {
 }
 
 @media(max-width:767px) {
-
+  .ffc-email-intg-img img {
+      max-width: 120px;
+      min-width: 120px;
+      height: 40px;
+      min-height: 40px;
+  }
+  .ffc-pages-main {
+    padding: 100px 15px;
+}
   .ffc-head-flex {
     grid-template-columns: 1fr;
   }
@@ -1569,7 +1593,7 @@ input.switch-inpt:checked+.switch-slider:before {
 
 
   .ffc-logo img {
-    max-width: 220px;
+    max-width: 180px;
   }
 
   .ffc-cards-wrapper {

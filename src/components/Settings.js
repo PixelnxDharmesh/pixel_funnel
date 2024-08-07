@@ -248,16 +248,100 @@ const Settings = () => {
       </div>
 
       <Popup isOpen={popupType === 'addAutoresponder'} onClose={closePopup}>
-        <h2>Add Autoresponder</h2>
+        <h2 className='ffc-modal-heading'>Add Autoresponder</h2>
+
+        <div className="ffc-email-intg-wr">
+          <div className="ffc-email-intg-encap">
+            <div className="ffc-email-intg-img">
+              <img src="/images/aweber.png" alt="" />
+            </div>
+            <div className="ffc-email-intg-info">
+
+              <button type="button" className="ffc-btn ffc-btn-04" onClick={() => toggleSettings('autoresponder1')}>Connect</button>
+            </div>
+          </div>
+          <div className="ffc-email-intg-encap">
+            <div className="ffc-email-intg-img">
+              <img src="/images/aweber.png" alt="" />
+            </div>
+            <div className="ffc-email-intg-info">
+
+              <button type="button" className="ffc-btn ffc-btn-04" onClick={() => toggleSettings('autoresponder1')}>Connect</button>
+            </div>
+          </div>
+          <div className="ffc-email-intg-encap">
+            <div className="ffc-email-intg-img">
+              <img src="/images/aweber.png" alt="" />
+            </div>
+            <div className="ffc-email-intg-info">
+
+              <button type="button" className="ffc-btn ffc-btn-04" onClick={() => toggleSettings('autoresponder1')}>Connect</button>
+            </div>
+          </div>
+          <div className="ffc-email-intg-encap">
+            <div className="ffc-email-intg-img">
+              <img src="/images/aweber.png" alt="" />
+            </div>
+            <div className="ffc-email-intg-info">
+
+              <button type="button" className="ffc-btn ffc-btn-04" onClick={() => toggleSettings('autoresponder1')}>Connect</button>
+            </div>
+          </div>
+        </div>
+
         {/* Add  content */}
       </Popup>
       <Popup isOpen={popupType === 'addPayment'} onClose={closePopup}>
-        <h2>Add Payment</h2>
+        <h2 className='ffc-modal-heading'>Payment Provider
+        </h2>
+
+        <div className="ffc-email-intg-wr">
+          <div className="ffc-email-intg-encap">
+            <div className="ffc-email-intg-img">
+              <img src="/images/stripe.png" alt="" />
+            </div>
+            <div className="ffc-email-intg-info">
+
+              <button type="button" className="ffc-btn ffc-btn-04" onClick={() => toggleSettings('autoresponder1')}>Connect</button>
+            </div>
+          </div>
+          <div className="ffc-email-intg-encap">
+            <div className="ffc-email-intg-img">
+              <img src="/images/stripe.png" alt="" />
+            </div>
+            <div className="ffc-email-intg-info">
+
+              <button type="button" className="ffc-btn ffc-btn-04" onClick={() => toggleSettings('autoresponder1')}>Connect</button>
+            </div>
+          </div>
+          <div className="ffc-email-intg-encap">
+            <div className="ffc-email-intg-img">
+              <img src="/images/stripe.png" alt="" />
+            </div>
+            <div className="ffc-email-intg-info">
+
+              <button type="button" className="ffc-btn ffc-btn-04" onClick={() => toggleSettings('autoresponder1')}>Connect</button>
+            </div>
+          </div>
+          <div className="ffc-email-intg-encap">
+            <div className="ffc-email-intg-img">
+              <img src="/images/stripe.png" alt="" />
+            </div>
+            <div className="ffc-email-intg-info">
+
+              <button type="button" className="ffc-btn ffc-btn-04" onClick={() => toggleSettings('autoresponder1')}>Connect</button>
+            </div>
+          </div>
+        </div>
+
         {/* Add  content */}
       </Popup>
       <Popup isOpen={popupType === 'createEmail'} onClose={closePopup}>
-        <div className="row">
 
+      <h2 className='ffc-modal-heading'>Create Email Template
+      </h2>
+
+        <div className="ffc-createEmail-temp">
           <div className="ffc-main-input ffc-require">
             <label className="ffc-main-label"> Email Type</label>
             <Select className='ffc-custom-select'
@@ -305,7 +389,7 @@ const Settings = () => {
               autoComplete="off"
             />
           </div>
-          
+
           <div className="ffc-main-input ffc-require">
             <label className="ffc-main-label">Email Content</label>
           </div>
@@ -329,6 +413,16 @@ const Settings = () => {
               console.log('Focus.', editor);
             }}
           />
+
+          <div className='ffc-btn-flex'>
+            <button className='ffc-btn ffc-btn-01'>
+              close
+            </button>
+            <button className='ffc-btn ffc-btn-02'>
+              Create
+            </button>
+          </div>
+
 
         </div>
         {/* Add  content */}

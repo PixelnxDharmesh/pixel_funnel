@@ -429,7 +429,7 @@ function CardsList() {
             </div>
           </form>
           <Popup isOpen={popupType === 'add Statistics'} onClose={closePopup}>
-        <h2>Add Statistics</h2>
+              <h2 className='ffc-modal-heading'>Product 1 - Statistics</h2>
         {/* Add  content */}
       </Popup>
         </div>
