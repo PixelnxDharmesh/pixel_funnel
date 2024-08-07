@@ -21,6 +21,7 @@ function CardsList() {
   const [visibleOptionsProductId, setVisibleOptionsProductId] = useState(null);
   const [isViewModalOpen, setViewModalOpen] = useState(false);
   const [selectedProductForView, setSelectedProductForView] = useState(null);
+  const [selecteOptionmain, setselecteOptionmain] = useState(null);
   const [popupType, setPopupType] = useState(null);
 
 
@@ -96,6 +97,7 @@ function CardsList() {
   const closePopup = () => {
     setPopupType(null);
   };
+
 
   return (
     <>
@@ -289,8 +291,7 @@ function CardsList() {
                   <a href="javascript:;" className={`tab-a ${activeTab === 'tab6' ? 'active-a' : ''}`} onClick={() => handleTabClick('tab6')} data-id="tab6">Cart Abandonment</a>
                 </li>
                 <li>
-                  <a href="javascript:;" className={`tab-a ${activeTab === 'tab7' ? 'active-a' : ''}`} onClick={() => openPopup('Statistics')} data-id="tab7">Statistics</a>
-                  {/* <button type="button" className="ffc-btn" onClick={() => openPopup('addAutoresponder')}>Add Autoresponder</button> */}
+                  <a href="javascript:;" className={`tab-a ${activeTab === 'tab7' ? 'active-a' : ''}`} onClick={() => openPopup('add Statistics')} data-id="tab7">Statistics</a>
                 </li>
               </ul>
 
@@ -330,7 +331,11 @@ function CardsList() {
                       <p class="pn-switch-lable">Live
                       </p>
                     </div>
+
+
                   </div>
+
+
 
                 </div>
               </div>
@@ -357,10 +362,28 @@ function CardsList() {
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
+              <div className={`tab ${activeTab === 'tab3' ? 'tab-active' : ''}`} data-id="tab3">
+                <div className="col-xl-6 col-lg-6 col-sm-12">
+                  <div className="ffc-main-input ffc-require">
+                    <label className="ffc-main-label"> Choose the currency for the product</label>
+                    <div className='ffc-price-flex'>
+                      <Select className='ffc-custom-select'
+
+                        value={selecteOptionmain}
+                        onChange={handleChange}
+                        options={options}
+                      />
+
+                      <button className='ffc-btn'>Set Product Price</button>
+                    </div>
+
+                  </div>
                    <div className='ffc-set-product-addRemove'>
                         <div className='ffc-set-product-left'>
-                             <h6>one time</h6>
-                             <p>08:30</p>
+                             <h6>one time fee</h6>
+                             <p>$ 830</p>
 
                         </div>
                         <div className='ffc-set-product-right'>
@@ -369,27 +392,8 @@ function CardsList() {
                         </div>
                    </div>
                 </div>
-              </div>
-              <div className={`tab ${activeTab === 'tab3' ? 'tab-active' : ''}`} data-id="tab3">
-                <div className="col-xl-6 col-lg-6 col-sm-12">
-                  <div className="ffc-main-input ffc-require">
-                    <label className="ffc-main-label">Choose the currency for the product*</label>
-                    <select className="ffc-select-wr" name="state">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
-                    </select>
-                  </div>
-                  <p className=''>Please set price for your product
-                  </p>
-                </div>
+
+
               </div>
               <div className={`tab ${activeTab === 'tab4' ? 'tab-active' : ''}`} data-id="tab4">
                 <div className="row">
@@ -409,7 +413,6 @@ function CardsList() {
                   </div>
                 </div>
 
-                <button> Button </button>
               </div>
               <div className={`tab ${activeTab === 'tab5' ? 'tab-active' : ''}`} data-id="tab5">
 
@@ -425,21 +428,20 @@ function CardsList() {
               </div>
             </div>
           </form>
-          <Popup isOpen={popupType === 'Statistics'} onClose={closePopup}>
-            <h2>Add Statistics</h2>
-            {/* Add  content */}
-          </Popup>
+          <Popup isOpen={popupType === 'add Statistics'} onClose={closePopup}>
+        <h2>Add Statistics</h2>
+        {/* Add  content */}
+      </Popup>
         </div>
-
       )}
     </>
-
 
 
   );
 }
 
 export default CardsList;
+
 
 
 

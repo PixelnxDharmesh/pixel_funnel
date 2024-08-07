@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Select from 'react-select'
 import Popup from './Popup';
+
 
 const Settings = () => {
   const [activeTab, setActiveTab] = useState('tab1');
@@ -157,9 +159,77 @@ const Settings = () => {
                 </div>
 
               <div className="ffc-btn-wr ffc-btn-right ffc-btn-2">
-                <button type="button" className="ffc-btn" onClick={() => openPopup('createEmail')}>Create Email</button>
+                  <button type="button" className="ffc-btn" onClick={() => openPopup('createEmail')}>Create Email</button>
+                </div>
               </div>
               
+               <div className="ffc-email-settings-wr">
+                 <div className="ffc-email-settings-item">
+                   <div className="ffc-email-settings-icons">
+                     <img src="/images/svg/email_svg.svg" alt="" />
+                   </div>
+
+                   <ul className="">
+                     <li className="">
+                       <p>Email</p>
+                       <p> <span>Demo Name</span></p>
+                     </li>
+                     <li className="">
+                       <p>Email Type</p>
+                       <p> <span>Demo Type</span></p>
+                     </li>
+                   </ul>
+                   <div className="ffc-btn-wr ffc-btn-2 mt-20">
+                     <button className="ffc-btn">View Detail</button>
+                   </div>
+
+                 </div>
+
+                 <div className="ffc-email-settings-item">
+                   <div className="ffc-email-settings-icons">
+                     <img src="/images/svg/email_svg.svg" alt="" />
+                   </div>
+                   <ul className="">
+                     <li className="">
+                       <p>Email</p>
+                       <p> <span>Demo Name</span></p>
+                     </li>
+                     <li className="">
+                       <p>Email Type</p>
+                       <p> <span>Demo Type</span></p>
+                     </li>
+                   </ul>
+                   <div className="ffc-btn-wr ffc-btn-2 mt-20">
+                     <button className="ffc-btn">View Detail</button>
+                   </div>
+
+                 </div>
+                 <div className="ffc-email-settings-item">
+                   <div className="ffc-email-settings-icons">
+                     <img src="/images/svg/email_svg.svg" alt="" />
+                   </div>
+                   <ul className="">
+                     <li className="">
+                       <p>Email</p>
+                       <p> <span>Demo Name</span></p>
+                     </li>
+                     <li className="">
+                       <p>Email Type</p>
+                       <p> <span>Demo Type</span></p>
+                     </li>
+                   </ul>
+                   <div className="ffc-btn-wr ffc-btn-2 mt-20">
+                     <button className="ffc-btn">View Detail</button>
+                   </div>
+
+                 </div>
+               </div>
+
+
+
+
+
+
             </div>
           </div>
         </form>
@@ -170,8 +240,8 @@ const Settings = () => {
         {/* Add  content */}
       </Popup>
       <Popup isOpen={popupType === 'addPayment'} onClose={closePopup}>
-        <h2>Add Payment</h2> 
-      {/* Add  content */}
+        <h2>Add Payment</h2>
+        {/* Add  content */}
       </Popup>
       <Popup isOpen={popupType === 'createEmail'} onClose={closePopup}>
         <div className="row">
