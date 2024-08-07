@@ -74,6 +74,9 @@ function CardsList() {
     setPopupType(type);
   };
 
+  const closePopup = () => {
+    setPopupType(null);
+  };
 
   return (
     <>
