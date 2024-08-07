@@ -372,7 +372,6 @@ function CardsList() {
                       </div>
                     </div>
 
-                    <button>ddd</button>
                   </div>
                   <div className={`tab ${activeTab === 'tab5' ? 'tab-active' : ''}`} data-id="tab5">
 

@@ -175,7 +175,7 @@ const Settings = () => {
                         </div>
                         <div className="ffc-btn-iintg-infon">
                           <button type="button" className="ffc-btn ffc-btn-01">Disable</button>
-                          <button type="button" className="ffc-btn ffc-btn-02">Remove</button>  
+                          <button type="button" className="ffc-btn ffc-btn-02">Remove</button>
                           <button type="button" className="ffc-btn ffc-btn-03">Update</button>
                         </div>
                       </div>
@@ -194,11 +194,68 @@ const Settings = () => {
       </Popup>
       <Popup isOpen={popupType === 'addPayment'} onClose={closePopup}>
         <h2>Add Payment</h2>
-      {/* Add  content */}
+        {/* Add  content */}
       </Popup>
       <Popup isOpen={popupType === 'createEmail'} onClose={closePopup}>
-        <h2>Create Email</h2>
-     {/* Add  content */}
+        <div className="row">
+
+          <div className="col-xl-6 col-lg-6 col-sm-12">
+            <div className="ffc-main-input ffc-require">
+              <label className="ffc-main-label">Email Type</label>
+              <select className="ffc-select-wr" name="state">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+          </div>
+          <div className="col-xl-6 col-lg-6 col-sm-12">
+            <div className="ffc-main-input ffc-require">
+              <label className="ffc-main-label">Email Template Name</label>
+              <input
+                className="ffc-custom-input require"
+                data-error="Title is required"
+                type="text"
+                placeholder="Email Template Name"
+                name="title"
+                value=""
+                onChange=""
+                autoComplete="off"
+              />
+            </div>
+          </div>
+
+          <div className="col-xl-6 col-lg-6 col-sm-12">
+            <div className="ffc-main-input ffc-require">
+              <label className="ffc-main-label">Choose Email Template
+              </label>
+              <select className="ffc-select-wr" name="state">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+          </div>
+
+          <div className="col-xl-6 col-lg-6 col-sm-12">
+            <div className="ffc-main-input ffc-require">
+              <label className="ffc-main-label">Email Subject</label>
+              <input
+                className="ffc-custom-input require"
+                data-error="Title is required"
+                type="text"
+                placeholder="Email Subject"
+                name="title"
+                value=""
+                onChange=""
+                autoComplete="off"
+              />
+            </div>
+          </div>
+        </div>
+        {/* Add  content */}
       </Popup>
     </div>
   );
