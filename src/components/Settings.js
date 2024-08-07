@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import Select from 'react-select'
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import Popup from './Popup';
 
 
-import Popup from './Popup'; // Make sure the path to the Popup component is correct
+
 
 const Settings = () => {
   const [activeTab, setActiveTab] = useState('tab1');

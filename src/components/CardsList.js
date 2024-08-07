@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Select from 'react-select'
 import { Link } from 'react-router-dom';
+import Popup from './Popup';
 
 
 
@@ -21,6 +22,7 @@ function CardsList() {
   const [isViewModalOpen, setViewModalOpen] = useState(false);
   const [selectedProductForView, setSelectedProductForView] = useState(null);
   const [selecteOptionmain, setselecteOptionmain] = useState(null);
+  const [popupType, setPopupType] = useState(null);
 
 
   const toggleModal = () => {
@@ -87,6 +89,15 @@ function CardsList() {
   const toggleOptions = (productId) => {
     setVisibleOptionsProductId(visibleOptionsProductId === productId ? null : productId);
   };
+
+  const openPopup = (type) => {
+    setPopupType(type);
+  };
+
+  const closePopup = () => {
+    setPopupType(null);
+  };
+
 
   return (
     <>
@@ -280,7 +291,7 @@ function CardsList() {
                   <a href="javascript:;" className={`tab-a ${activeTab === 'tab6' ? 'active-a' : ''}`} onClick={() => handleTabClick('tab6')} data-id="tab6">Cart Abandonment</a>
                 </li>
                 <li>
-                  <a href="javascript:;" className={`tab-a ${activeTab === 'tab7' ? 'active-a' : ''}`} onClick={() => handleTabClick('tab7')} data-id="tab7">Statistics</a>
+                  <a href="javascript:;" className={`tab-a ${activeTab === 'tab7' ? 'active-a' : ''}`} onClick={() => openPopup('add Statistics')} data-id="tab7">Statistics</a>
                 </li>
               </ul>
 
@@ -371,8 +382,8 @@ function CardsList() {
                   </div>
                    <div className='ffc-set-product-addRemove'>
                         <div className='ffc-set-product-left'>
-                             <h6>one time</h6>
-                             <p>08:30</p>
+                             <h6>one time fee</h6>
+                             <p>$ 830</p>
 
                         </div>
                         <div className='ffc-set-product-right'>
@@ -417,6 +428,10 @@ function CardsList() {
               </div>
             </div>
           </form>
+          <Popup isOpen={popupType === 'add Statistics'} onClose={closePopup}>
+        <h2>Add Statistics</h2>
+        {/* Add  content */}
+      </Popup>
         </div>
       )}
     </>
@@ -426,6 +441,7 @@ function CardsList() {
 }
 
 export default CardsList;
+
 
 
 
