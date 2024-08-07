@@ -6,6 +6,8 @@ const Settings = () => {
   const [activeTab, setActiveTab] = useState('tab1');
   const [settingsVisibility, setSettingsVisibility] = useState({});
   const [popupType, setPopupType] = useState(null);
+  const [selecteOptionmain, setselecteOptionmain] = useState(null);
+
 
   const handleTabClick = (tabId) => {
     setActiveTab(tabId);
@@ -26,6 +28,17 @@ const Settings = () => {
     setPopupType(null);
   };
 
+
+  const handleChange = (val) => {
+    setselecteOptionmain(val)
+  }
+
+  const options = [
+    { value: 'USD', label: 'USD ($)' },
+    { value: 'GBP', label: 'GBP (£)' },
+    { value: 'EUR', label: 'EUR (€)' }
+  ]
+
   return (
     <div className="ffc-tab-wrapper">
       <div className="ffc-container">
@@ -39,7 +52,6 @@ const Settings = () => {
           </Link>
           <h3 className="ffc-heading">Setting</h3>
         </div>
-
         <form className="ffc-tab-wr" action="" method="">
           <div className="ffc-tab-list tab-menu">
             <ul>
@@ -136,6 +148,14 @@ const Settings = () => {
               </div>
             </div>
             <div className={`tab ${activeTab === 'tab3' ? 'tab-active' : ''}`} data-id="tab3">
+
+
+              <div className='ffc-head-flex'>
+                <div className='ffc-tab-inner-heading'>
+                  <h2>Email Settings</h2>
+                  <p>Create Email(Enter Email Type, Email Template Name)</p>
+                </div>
+
               <div className="ffc-btn-wr ffc-btn-right ffc-btn-2">
                 <button type="button" className="ffc-btn" onClick={() => openPopup('createEmail')}>Create Email</button>
               </div>
@@ -154,8 +174,61 @@ const Settings = () => {
       {/* Add  content */}
       </Popup>
       <Popup isOpen={popupType === 'createEmail'} onClose={closePopup}>
-        <h2>Create Email</h2>
-     {/* Add  content */}
+        <div className="row">
+
+          <div className="ffc-main-input ffc-require">
+            <label className="ffc-main-label"> Email Type</label>
+            <Select className='ffc-custom-select'
+
+              value={selecteOptionmain}
+              onChange={handleChange}
+              options={options}
+            />
+          </div>
+
+          <div className="col-xl-6 col-lg-6 col-sm-12">
+            <div className="ffc-main-input ffc-require">
+              <label className="ffc-main-label">Email Template Name</label>
+              <input
+                className="ffc-custom-input require"
+                data-error="Title is required"
+                type="text"
+                placeholder="Email Template Name"
+                name="title"
+                value=""
+                onChange=""
+                autoComplete="off"
+              />
+            </div>
+          </div>
+
+          <div className="ffc-main-input ffc-require">
+            <label className="ffc-main-label"> Choose Email Template</label>
+            <Select className='ffc-custom-select'
+
+              value={selecteOptionmain}
+              onChange={handleChange}
+              options={options}
+            />
+          </div>
+
+          <div className="col-xl-6 col-lg-6 col-sm-12">
+            <div className="ffc-main-input ffc-require">
+              <label className="ffc-main-label">Email Subject</label>
+              <input
+                className="ffc-custom-input require"
+                data-error="Title is required"
+                type="text"
+                placeholder="Email Subject"
+                name="title"
+                value=""
+                onChange=""
+                autoComplete="off"
+              />
+            </div>
+          </div>
+        </div>
+        {/* Add  content */}
       </Popup>
     </div>
   );

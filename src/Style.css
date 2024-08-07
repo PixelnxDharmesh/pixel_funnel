@@ -930,6 +930,7 @@ input.switch-inpt:checked+.switch-slider:before {
   text-transform: capitalize;
 }
 
+
 .ffc-cards-item-details .ffc-product-box {
   margin: 12px 0;
 }
@@ -939,6 +940,7 @@ input.switch-inpt:checked+.switch-slider:before {
   gap: 5px;
   margin-bottom: 8px;
 }
+
 
 .ffc-cards-item-details .ffc-product-box li p {
   font-size: 14px;
@@ -982,7 +984,7 @@ input.switch-inpt:checked+.switch-slider:before {
   background-color: var(--white-color);
   box-shadow: 0 18px 30px 0 rgba(177, 193, 224, .1);
   border-radius: 12px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .ffc-cards-item-nodata img {
@@ -1020,7 +1022,7 @@ input.switch-inpt:checked+.switch-slider:before {
   box-shadow: 0 18px 30px 0 rgba(177, 193, 224, .1);
   border-radius: 12px;
   padding: 20px;
-  margin-top: 20px;
+  margin-top: 30px;
 
 }
 
@@ -1204,94 +1206,78 @@ input.switch-inpt:checked+.switch-slider:before {
 }
 
 /* select css start */
-.ffc-select-wr {
-  width: 100%;
-  max-width: 100%;
+.ffc-custom-select {
+   position: relative;
 }
-
-.select2-container {
-  width: 100% !important;
+.ffc-custom-select input,
+.ffc-custom-select select {
+  height: 30px;
+  font-family: "Lato", sans-serif;
 }
-
-.select2-container .select2-selection--single {
-  height: 50px;
-  box-shadow: 0px 20px 34px 0px rgba(0, 0, 0, 0.03) !important;
-  border-radius: 6px;
-  border: 1px solid #ffffff;
-  color: #c9d1d5;
-  font-size: 15px;
-  padding: 0 15px;
-  outline: none;
-  text-align: left;
+.ffc-custom-select .css-t3ipsp-control:hover {
+  box-shadow: none;
+  border-color: #ddd;
 }
+.ffc-custom-select .css-t3ipsp-control:focus-visible {
+  box-shadow: none;
+  border-color: #ddd;
 
-.select2-container--default .select2-selection--single .select2-selection__rendered {
-  line-height: 50px;
-  /*color: #c9d1d5;*/
 }
+.ffc-custom-select .css-t3ipsp-control:focus {
+  box-shadow: none;
+  border-color: #ddd;
 
-.select2-container--default .select2-selection--single .select2-selection__arrow {
-  height: auto;
-  bottom: 1px;
-  right: 20px;
 }
-
-.select2-container--default .select2-selection--single .select2-selection__arrow b {
-  border-color: #c9d1d5 transparent;
-}
-
-.select2-dropdown {
-  border-color: #eee;
-  box-shadow: 0 20px 30px rgb(0 0 0 / 0.05);
-  border-radius: 6px;
-}
-
-.select2-container--open.select2-container .select2-selection--single {
-  border-color: #eee;
-}
-
-.select2-dropdown .select2-search--dropdown {
-  padding: 10px 30px;
-}
-
-.select2-container--default .select2-search--dropdown .select2-search__field {
-  padding: 0;
-  height: 40px;
-  border-radius: 5px;
-  border-color: #eee;
-  outline: none;
-  padding: 0 20px;
-  color: #c9d1d5;
-}
-
-.select2-container--default .select2-results>.select2-results__options>li strong {
-  color: var(--headingColor);
-}
-
-.select2-container--default .select2-results>.select2-results__options li {
-  padding: 11px 20px;
-  background-color: transparent;
-  color: #c9d1d5;
-  position: relative;
-}
-
-.select2-dropdown.select2-dropdown--above {
-  box-shadow: 0 -20px 30px rgb(0 0 0 / 0.05);
-}
-
-.select2-results__options--nested li:before {
-  content: '-';
-  padding-right: 11px;
-}
-
-.select2-results__options--nested li {
-  padding: 8px !important;
-}
-
 /* select css start */
+.ffc-price-flex {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.ffc-set-product-addRemove {
+  background: var(--white-color);
+  padding: 15px 15px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+.ffc-set-product-right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+}
+.ffc-set-product-left h6 {
+  font-size: 16px;
+  text-transform: capitalize;
+  margin: 0 0 10px;
+  color: var(--title-color);
+  font-weight: 600;
+}
+.ffc-set-product-left p {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--primary-color);
+  margin: 0;
+}
+.ffc-set-product-right .ffc-btn {
+  min-width: 90px;
+  height: 35px;
+  font-size: 14px;
+  line-height: 35px;
+  padding: 0 5px;
+}
+
+
 
 
 /* setting intg */
+
+
+
 
 .ffc-email-intg-input {
   background: var(--white-color);

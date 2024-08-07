@@ -1,10 +1,18 @@
 import React, { useState } from 'react';
+import Select from 'react-select'
 import { Link } from 'react-router-dom';
 import Popup from './Popup';
 
+
+
 function CardsList() {
   const [isModalOpen, setModalOpen] = useState(false);
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState([{
+    id: 1,
+    name: "dfg",
+    type: 'Digital',
+    createdOn: new Date().toLocaleString(),
+  }]);
   const [newProductName, setNewProductName] = useState('');
   const [isEditModalOpen, setEditModalOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('tab1');
@@ -20,6 +28,17 @@ function CardsList() {
     setModalOpen(!isModalOpen);
     document.body.classList.toggle('popup-show', !isModalOpen);
   };
+
+
+  const handleChange = (val) => {
+    setselecteOptionmain(val)
+  }
+
+  const options = [
+    { value: 'USD', label: 'USD ($)' },
+    { value: 'GBP', label: 'GBP (£)' },
+    { value: 'EUR', label: 'EUR (€)' }
+  ]
 
 
   const toggleEditModal = (product) => {
@@ -338,6 +357,17 @@ function CardsList() {
                       </div>
                     </div>
                   </div>
+                   <div className='ffc-set-product-addRemove'>
+                        <div className='ffc-set-product-left'>
+                             <h6>one time</h6>
+                             <p>08:30</p>
+
+                        </div>
+                        <div className='ffc-set-product-right'>
+                          <button className='ffc-btn ffc-btn-01'>Edit</button>
+                          <button className='ffc-btn ffc-btn-03'>Remove</button>
+                        </div>
+                   </div>
                 </div>
               </div>
               <div className={`tab ${activeTab === 'tab3' ? 'tab-active' : ''}`} data-id="tab3">
