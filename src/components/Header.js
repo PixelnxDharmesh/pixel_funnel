@@ -19,6 +19,12 @@ function Header() {
               <li className="ffc-nav-item">
                 <Link to="/Settings" className='ffc-nav-active'>Settings</Link>
               </li>
+              <li className="ffc-nav-item">
+                <Link to="/Login" className='ffc-nav-active'>Login</Link>
+              </li>
+              <li className="ffc-nav-item">
+                <Link to="/Signup" className='ffc-nav-active'>Signup</Link>
+              </li>
                                    
             </ul>
           </div>
