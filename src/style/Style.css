@@ -670,6 +670,16 @@ input.switch-inpt:checked+.switch-slider:before {
 }
 
 /* section heading end */
+
+
+
+/* login css start */
+
+/* login css start */
+
+
+
+
 /* header css start */
 .ffc-header-wrapper {
   position: fixed;
@@ -812,9 +822,6 @@ input.switch-inpt:checked+.switch-slider:before {
   -o-trans-webkit-transform: translateY(0px);
   transform: translateY(0px);
 }
-
-
-
 /* profile end */
 
 /* cards */
