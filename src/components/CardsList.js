@@ -57,14 +57,14 @@ function CardsList() {
     document.body.classList.toggle('popup-show', false);
   };
 
-  const handleViewButtonClick = (product) => {
+  const handleViewButtonClick = (product) => {  
     setSelectedProductForView(product);
     setViewModalOpen(true);
     document.body.classList.toggle('popup-show', true);
   };
 
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e) => {  
     setNewProductName(e.target.value);
   };
 
