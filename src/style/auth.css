@@ -1,0 +1,768 @@
+:root {
+    --fbc-primary-color: #526FFF;
+    --fbc-secondary-color: #47406c;
+    --fbc-title-color: #010101;
+    --fbc-text-color: #4C4F5A;
+    --fbc-white-color:#fff;
+    --fbc-success-color: #36B133;
+    --fbc-border-color: #000;
+    --fbc-border-radius: 10px;
+    --fbc-border-input-color: #EDEEED;
+    --fbc-border-input-radius: 6px;
+    --transition: all 0.3s;
+    --fbc-border-color-rgba: 3, 1, 76;
+}
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    font-family: "Figtree", sans-serif;
+    outline: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: #ffffff;
+    font-family: "Figtree", sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0px;
+}
+
+a,
+a:hover,
+a:focus,
+button,
+button:hover {
+    color: var(--fbc-primary-color);
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+svg,
+svg path{
+    -webkit-transition: var(--fbc-primary-color);
+    -moz-transition: var(--fbc-primary-color);
+    -ms-transition: var(--fbc-primary-color);
+    -o-transition: var(--fbc-primary-color);
+    transition: var(--fbc-primary-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Figtree", sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+.d-none {
+    display: none !important;
+}
+
+ul,
+p {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    line-height: 1.4;
+}
+
+iframe {
+    width: 100%;
+    border: none;
+}
+
+/*=============================
+    ScrollBar Style
+=============================*/	  
+
+*::-webkit-scrollbar {
+	width: 4px;
+	height: 4px;
+}
+*::-webkit-scrollbar-track {
+    background-color: #f5f7f9;
+    border-radius: 10px;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: var(--fbc-primary-color);
+    border-radius: 10px;
+}
+
+/*=============================
+ Button Style
+=============================*/
+.fbc_btn {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+    width: 100%;
+    min-height: 60px;
+    padding: 0 15px;
+    border-radius: 8px;
+    color: var(--fbc-white-color);
+    border: none;
+    background: var(--fbc-primary-color);
+    transition: var(--transition);
+}
+.fbc_btn:hover {
+    color: var(--fbc-white-color);
+}
+
+
+
+/*=============================
+ Login Page Style
+=============================*/
+.fbc_login_main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0;
+    min-height: 100vh;
+    /* background-image: url(../images/bg_login.png); */
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+}
+.fbc_login_main .fbc_auth_login_box {
+    margin: 0 auto;
+    position: relative;
+    max-width: 1260px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    border-radius: 60px;
+    border: 2px solid #fff ;
+}
+.fbc_letf_auth {
+    max-width: 100%;
+    padding: 0 50px;
+}
+.fbc_letf_auth_bg {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 15px 10px;
+    min-height: 745px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.fbc_letf_auth_heading {
+    text-align: center;
+    display: inline-block;
+    background-color: var(--fbc-white-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: max-content;
+    border-radius: 0 0 25px 25px;
+}
+.fbc_letf_auth h6 {
+    font-size: 30px;
+    text-align: center;
+    color: var(--fbc-title-color);
+    padding: 10px 40px 20px;
+}
+.fbc_letf_auth_footer {
+    display: flex;
+    text-align: center;
+    background: #ffffff61;
+    max-width: 350px;
+    height: 115px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    margin: 20px auto 0;
+    box-shadow: 0px 0px 60px 0px #9383B229;
+    border: 1px solid var(--fbc-white-color);
+}
+.fbc_letf_auth_footer img {
+    max-width: 230px;
+    max-height: 50px;
+    width: 100%;
+    object-fit: contain;
+}
+.fbc_login_main .fbc_login_wrapper {
+    position: relative;
+    padding: 20px 75px;
+    background-color: var(--fbc-white-color);
+    max-width: 552px;
+    min-height: 745px;
+    border-radius: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 0px 90px 0px #2354771A;
+}
+.fbc_login_main .fbc_login_wrapper .fbc_login_logo {
+  margin-bottom: 30px;
+}
+.fbc_login_main .fbc_login_wrapper .fbc_login_logo img {
+    max-width: 100%;
+} 
+.fbc_login_main .fbc_login_wrapper h3 {
+    font-size: 30px;
+    color: var(--fbc-title-color);
+    font-weight: 800;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+.fbc_login_main .fbc_login_wrapper p {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    color: var(--fbc-text-color);
+}
+.fbc_login_main .fbc_auth_input_wrapper {
+    position: relative;
+    margin-top: 30px;
+}
+.fbc_login_main .fbc_auth_input {
+    position: relative;
+    width: 100%;
+    margin-bottom: 25px;
+}
+.fbc_main_label {
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0em;
+    text-align: left;
+    color: var(--fbc-title-color);
+    display: block;
+}
+.fbc_custom_input {
+    padding: 10px 50px 10px 25px;
+    position: relative;
+    height: 54px;
+    background-color: transparent;
+    display: block;
+    width: 100%;
+    line-height: 54px;
+    font-size: 15px;
+    letter-spacing: 0px;
+    color: var(--fbc-title-color);
+    font-weight: 400;
+    border: none;
+    border: 1px solid var(--fbc-border-input-color);
+    border-radius: var(--fbc-border-input-radius);
+}
+.fbc_custom_input:focus {
+    border: 1px solid var(--fbc-primary-color);
+} 
+.fbc_custom_textarea {
+    width: 100%;
+    line-height: 1.5;
+    padding: 10px 20px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: var(--fbc-title-color);
+    border: 1px solid rgba(var(--fbc-border-color-rgba), 12%);
+    background: #FBFAFF;
+    min-height: 120px;
+    /*resize: none;    */
+}
+.fbc_custom_input::placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    color: var(--fbc-text-color);
+}
+.fbc_custom_input:focus {
+    box-shadow: none;
+}
+.fbc_login_main .fbc_login_ic {
+    position: absolute;
+    top: 52px;
+    left: auto;
+    right: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fbc_login_main .fbc_remember {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+.fbc_login_main .fbc_remember a {
+    font-size: 14px;
+    letter-spacing: 0px;
+    color: var(--fbc-primary-color);
+    font-weight: 700;
+    text-align: right;
+}
+.fbc_auth_input_item {
+    position: relative;
+}
+.fbc_auth_input_item svg {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.auth-boy-img {
+    position: absolute;
+    right: -50px;
+    bottom: -20px;
+}
+.auth-boy-img img {
+    max-width: 150px;
+}
+/*=============================
+ Login Checkbox Style
+=============================*/
+.fbc_login_main .fbc_checkbox input {
+    display: none;
+}
+.fbc_login_main .fbc_checkbox label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0px;
+    line-height: 1.4;
+    color: var(--fbc-text-color);
+    cursor: pointer;
+}
+.fbc_login_main .fbc_checkbox label:before {
+    content: '';
+    -webkit-appearance: none;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: var(--fbc-white-color);
+    border: 1px solid #E9EFF6;
+}
+.fbc_login_main .fbc_checkbox input:checked+label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    width: 5px;
+    height: 9px;
+    border: solid var(--fbc-white-color);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+.fbc_login_main .fbc_checkbox input:checked+label:before {
+    background-color: var(--fbc-primary-color);
+    border: 0;
+}
+.fbc_auth_input_wrapper .fbc_already {
+    margin-top: 35px;
+}
+.fbc_auth_input_wrapper .fbc_already p {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--fbc-title-color);
+    letter-spacing: 0.2px;
+}
+.fbc_auth_input_wrapper .fbc_already p a {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--fbc-primary-color);
+    letter-spacing: 0.2px;
+}
+.fbc_auth_input_wrapper .fbc_already svg ,
+.fbc_auth_input_wrapper .fbc_already svg path {
+    fill: var(--fbc-primary-color);
+}
+.fbc_auth_input_wrapper .fbc_backTo a {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--fbc-primary-color);
+    letter-spacing: 0.2px;
+}
+
+.fbc_login_main  .fbc_btn:focus {
+    border: 1px solid var(--fbc-primary-color);
+    color: var(--fbc-primary-color);
+    background-color: #ffffff;
+}
+.fbc_login_main .fbc_btn:focus span svg {
+    fill:var(--fbc-primary-color);
+}
+.fbc_login_main .fbc_btn span {
+    margin: 0 5px 0 15px;
+    float: right;
+}
+.fbc_login_main .fbc_auth_title h3 {
+    font-size: 25px;
+    letter-spacing: 0;
+    color: var(--fbc-white-color);
+    font-weight: 900;
+    line-height: 1.4;
+}
+.fbc_login_main .fbc_letf_auth_bg .fbc_logo {
+    position: relative;
+    margin-bottom: 20px;
+}
+.fbc_login_main .fbc_form_btn .sign_btn{
+    font-size: 14px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    color: #221f25;
+    font-weight: 700;
+    position: relative;
+}
+.fbc_login_main .fbc_form_btn .sign_btn:hover{
+    color: var(--fbc-primary-color);
+}
+.fbc_login_main .fbc_form_btn a.sign_btn:before {
+    position: absolute;
+    content: '';
+    right: 100%;
+    width: 49px;
+    height: 1px;
+    background-color: #f1f1f8;
+    top: 50%;
+    margin-right: 15px;
+    transition: var(--transition);
+}
+.fbc_login_main .fbc_form_btn a.sign_btn:hover::before{
+    background-color: var(--fbc-primary-color);
+}
+.fbc_login_main .fbc_form_btn {
+    display: flex;
+    align-items: center;
+}
+/*=============================
+  notification popup Css Start
+=============================*/
+.fbc_notification_popup {
+    position: fixed;
+    right: -406px;
+    top: 25px;
+    overflow: hidden;
+    max-width: 320px;
+    width: 100%;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    /* background-color: #fff;
+    box-shadow: 0px 30px 108px 12px rgb(80 52 255 / 8%); */
+    z-index: 8;
+}
+.fbc_notification_popup img {
+    max-width: 100%;
+}
+.fbc_notification_popup .fbc_overlay {
+    position: fixed;
+    background-color: #0000007d;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: none;
+}
+.fbc_notification_popup .fbc_popup_wr {
+    max-width: 650px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100% - 1rem);
+}
+.fbc_notification_popup .fbc_popup_full {
+    border-radius: 15px ;
+    padding: 0;
+    background: var(--fbc-white-color);
+    position: relative;
+    z-index: 99999;
+}                                                                                                                                                               
+.fbc_notification_popup .fbc_popup_inner {
+    display: flex;
+    align-items: center;
+}
+.fbc_notification_popup .fbc_popup_content {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 50px 215px;
+    gap: 10px;
+}
+.fbc_notification_popup .fbc_popup_content h6 { 
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 15px;
+    padding: 0;
+    color: var(--popup-heading);
+}
+.fbc_notification_popup .fbc_popup_content h2 { 
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 5px;
+    padding: 0;
+    color: var(--fbc-success-color);
+}
+.fbc_notification_popup .fbc_popup_content p {
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    color: var(--fbc-text-color);
+}
+.fbc_notification_popup .fbc_popup_btn .fbc_input_design:focus-visible {
+    box-shadow: none;
+    border: 1px solid #e5eff1;
+    outline: none;
+}
+.fbc_notification_popup .fbc_popup_btn span {
+    font-size: 12px;
+    line-height: 18px;
+}
+.fbc_notification_popup .fbc_notification_popup.notification_popup_show {
+   display: block;
+}
+.fbc_notification_popup.showPopup .fbc_overlay {
+    display: block;
+    opacity: 0.7;
+}
+.fbc_notification_popup.showPopup {
+    right: 30px;
+}
+.fbc_notification_popup .fbc_popup_content.fbc_error .fbc_headingBox h2 {
+    color: red;
+}
+
+
+
+
+
+
+/* Modal Css  */
+.fbc_main_input {
+    margin-bottom: 15px;
+}
+
+.fbc_modal {
+    background: #EFF1FFF0;
+}
+.fbc_modal .modal-content {
+    padding: 40px;
+    border-radius: 25px;
+    border: none;
+}
+.fbc_modal .modal-header {
+    border: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+.fbc_modal .modal-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--fbc-title-color);
+}
+.fbc_modal .modal-header button {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+.fbc_modal .btn-close {
+    opacity: 1;
+    font-size: 50px;
+    font-weight: 300;
+}
+.fbc_modal .btn-close:focus {
+    box-shadow: none;
+}
+.fbc_modal .btn-close:hover {
+   opacity: 1; 
+}
+.fbc_modal .modal-header span {
+    font-size: 23px;
+    color: var(--fbc-white-color);
+    background: #B8BADC;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+}
+.fbc_modal .modal-body {
+    padding: 0;
+}
+.fbc_modal .modal-footer {
+    flex-wrap: nowrap;
+    justify-content: start;
+    border: none;
+    gap: 10px;
+    padding: 0;
+    margin-top: 10px;
+}
+.fbc_modal .modal-footer .fbc_btn {
+    display: inline-block;
+    /* width: max-content; */
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+.fbc_modal .modal-footer .fbc_btn_secondary {
+    background-color: var(--fbc-secondary-color);
+}
+
+.fbc_modal .modal-header span {
+    font-size: 23px;
+    color: var(--fbc-white-color);
+    background: #B8BADC;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+}
+.fbc_modal button.close {
+    border: none;
+    border-radius: 100px;
+    background: transparent;
+}
+/* Modal Css End  */
+
+/* Modal Center Start */
+.fbc_modal_center .modal-footer {
+    justify-content: center;
+}
+.fbc_modal_center .modal-body {
+    text-align: center;
+} 
+.fbc_modal_center .modal-body img {
+    max-width: 70px;
+    margin-bottom: 40px;
+}
+.fbc_modal_center .modal-body h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: var(--fbc-title-color);
+}
+.fbc_modal_center .modal-body p {
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--fbc-text-color);
+}
+.fbc_modal_center .modal-footer {
+    margin-top: 30px;
+}
+
+
+
+
+/*=============================
+Responsive Style
+=============================*/
+
+@media (max-width:1200px) {
+    .fbc_login_main .fbc_letf_auth_bg {
+        display: none;
+    }
+    .fbc_login_main .fbc_auth_login_box {
+        grid-template-columns: 1fr;
+    }
+    .auth-boy-img {
+       display: none;
+    }
+}
+@media (max-width:767px) {
+    .fbc_modal .fbc_notification_popup {
+        bottom: 15px;
+        right: 15px;
+    }
+    .fbc_modal .fbc_popup_content {
+        grid-template-columns: 40px 150px;
+    }
+    .fbc_modal .fbc_popup_content h2 { 
+        font-size: 16px;
+    }
+    .fbc_modal .fbc_popup_content p {
+        font-size: 12px;
+    }
+    .fbc_login_main .fbc_checkbox label {
+        font-size: 12px;
+    }
+    .fbc_login_main .fbc_remember a {
+        font-size: 12px;
+    }
+}
+@media (max-width:575px) {
+    .fbc_login_main .fbc_form_btn {
+        justify-content: center;
+    }
+    .fbc_login_main .fbc_login_wrapper h3 {
+        font-size: 18px;
+    }
+    .fbc_login_main .fbc_login_wrapper p {
+        font-size: 14px;
+    }
+    .fbc_login_main .fbc_auth_input input {
+        height: 60px;
+        line-height: 60px;
+    }
+    .fbc_login_main .fbc_btn {
+        min-height: 50px;
+        font-size: 14px;
+    }
+    .fbc_login_main .fbc_login_wrapper {
+        padding: 50px 10px;
+    }
+}
